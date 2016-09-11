@@ -1,0 +1,10 @@
+.section.about .section-buttons { margin: 20px 0 0 0; }
+@media (min-width: 992px) { .section.about .section-buttons { margin-top: 40px; } }
+.section.about .section-buttons .btn { border: none; margin: 0 5px; -webkit-border-radius: 0; -moz-border-radius: 0; -o-border-radius: 0; border-radius: 0; -webkit-transition: background-color 500ms ease-in-out; -moz-transition: background-color 500ms ease-in-out; -ms-transition: background-color 500ms ease-in-out; -o-transition: background-color 500ms ease-in-out; transition: background-color 500ms ease-in-out; }
+@media (min-width: 992px) { .section.about .section-buttons .btn { padding-left: 30px; padding-right: 30px; } }
+.section.about .section-buttons .btn.btn-default { background-color: #2196f3; color: #ffffff; }
+.section.about .section-buttons .btn.btn-default:hover, .section.about .section-buttons .btn.btn-default:active, .section.about .section-buttons .btn.btn-default:focus { color: #51adf6; }
+.section.about .section-buttons .btn.btn-primary { background-color: #38de8a; color: #ffffff; }
+.section.about .section-buttons .btn.btn-primary:hover, .section.about .section-buttons .btn.btn-primary:active, .section.about .section-buttons .btn.btn-primary:focus { color: #64e5a4; }
+.section.skills { color: white; }
+.section.skills .col-md-12 { background-color: #2196f3; padding: 40px; }
