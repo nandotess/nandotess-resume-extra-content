@@ -1,6 +1,6 @@
 .section.about .section-buttons { margin: 20px 0 0 0; }
 @media (min-width: 992px) { .section.about .section-buttons { margin-top: 40px; } }
-.section.about .section-buttons .btn { border: none; margin: 0 5px; -webkit-border-radius: 0; -moz-border-radius: 0; -o-border-radius: 0; border-radius: 0; -webkit-transition: background-color 300ms ease-in-out; -moz-transition: background-color 300ms ease-in-out; -ms-transition: background-color 300ms ease-in-out; -o-transition: background-color 300ms ease-in-out; transition: background-color 300ms ease-in-out; }
+.section.about .section-buttons .btn { border: none; font-size: 15px; font-weight: 500; margin: 0 5px; text-transform: uppercase; -webkit-border-radius: 0; -moz-border-radius: 0; -o-border-radius: 0; border-radius: 0; -webkit-transition: background-color 300ms ease-in-out; -moz-transition: background-color 300ms ease-in-out; -ms-transition: background-color 300ms ease-in-out; -o-transition: background-color 300ms ease-in-out; transition: background-color 300ms ease-in-out; }
 @media (min-width: 992px) { .section.about .section-buttons .btn { padding-left: 30px; padding-right: 30px; } }
 .section.about .section-buttons .btn.btn-default { background-color: #2196f3; color: white; }
 .section.about .section-buttons .btn.btn-default:hover, .section.about .section-buttons .btn.btn-default:active, .section.about .section-buttons .btn.btn-default:focus { background-color: #51adf6; }
