@@ -9,7 +9,7 @@
 					&:hover,
 					&:active,
 					&:focus {
-						color: lighten($section_about_button_cv_background_color, 10%);
+						background-color: lighten($section_about_button_cv_background_color, 10%);
 					}
 				}
 
@@ -20,7 +20,7 @@
 					&:hover,
 					&:active,
 					&:focus {
-						color: lighten($section_about_button_contact_background_color, 10%);
+						background-color: lighten($section_about_button_contact_background_color, 10%);
 					}
 				}
 			}

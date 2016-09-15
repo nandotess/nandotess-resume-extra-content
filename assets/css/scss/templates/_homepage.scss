@@ -11,7 +11,7 @@
 				border: none;
 				margin: 0 5px;
 				@include border-radius(0);
-				@include transition(background-color 500ms ease-in-out);
+				@include transition(background-color 300ms ease-in-out);
 
 				@media (min-width: $screen-md-min) {
 					padding: {
@@ -27,7 +27,7 @@
 					&:hover,
 					&:active,
 					&:focus {
-						color: lighten($section_about_button_cv_background_color, 10%);
+						background-color: lighten($section_about_button_cv_background_color, 10%);
 					}
 				}
 
@@ -38,7 +38,7 @@
 					&:hover,
 					&:active,
 					&:focus {
-						color: lighten($section_about_button_contact_background_color, 10%);
+						background-color: lighten($section_about_button_contact_background_color, 10%);
 					}
 				}
 			}
