@@ -22,10 +22,10 @@ if ( ! class_exists( 'NREC_Customizer' ) ) :
 		 * Setup class
 		 */
 		public function __construct() {
-			add_action( 'customize_register',              array( $this, 'customize_register' ), 20 );
+			add_action( 'customize_register', array( $this, 'customize_register' ), 20 );
 
-			add_filter( 'nandotess_resume_sass_variables', array( $this, 'sass_variables' ) );
-			add_filter( 'nandotess_resume_sass_content',   array( $this, 'sass_content' ) );
+			add_filter( 'nr_sass_variables',  array( $this, 'sass_variables' ) );
+			add_filter( 'nr_sass_content',    array( $this, 'sass_content' ) );
 		}
 
 		/**
@@ -36,9 +36,69 @@ if ( ! class_exists( 'NREC_Customizer' ) ) :
 		 */
 		public function customize_register( $wp_customize ) {
 			/**
+			 * Section About: Button CV Background Color
+			 */
+			$wp_customize->add_setting( 'nrec_section_about_button_cv_background_color', array(
+				'default'           	=> '#2196f3',
+				'sanitize_callback' 	=> 'sanitize_hex_color',
+			) );
+
+			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nrec_section_about_button_cv_background_color', array(
+				'label'	   				=> __( 'Button CV background color', 'nandotess-resume' ),
+				'section'  				=> 'nr_section_about',
+				'settings' 				=> 'nrec_section_about_button_cv_background_color',
+				'priority' 				=> 4,
+			) ) );
+
+			/**
+			 * Section About: Button CV Link Color
+			 */
+			$wp_customize->add_setting( 'nrec_section_about_button_cv_link_color', array(
+				'default'           	=> '#ffffff',
+				'sanitize_callback' 	=> 'sanitize_hex_color',
+			) );
+
+			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nrec_section_about_button_cv_link_color', array(
+				'label'	   				=> __( 'Button CV link color', 'nandotess-resume' ),
+				'section'  				=> 'nr_section_about',
+				'settings' 				=> 'nrec_section_about_button_cv_link_color',
+				'priority' 				=> 5,
+			) ) );
+			
+			/**
+			 * Section About: Button Contact Background Color
+			 */
+			$wp_customize->add_setting( 'nrec_section_about_button_contact_background_color', array(
+				'default'           	=> '#38de8a',
+				'sanitize_callback' 	=> 'sanitize_hex_color',
+			) );
+
+			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nrec_section_about_button_contact_background_color', array(
+				'label'	   				=> __( 'Button contact background color', 'nandotess-resume' ),
+				'section'  				=> 'nr_section_about',
+				'settings' 				=> 'nrec_section_about_button_contact_background_color',
+				'priority' 				=> 6,
+			) ) );
+
+			/**
+			 * Section About: Button Contact Link Color
+			 */
+			$wp_customize->add_setting( 'nrec_section_about_button_contact_link_color', array(
+				'default'           	=> '#ffffff',
+				'sanitize_callback' 	=> 'sanitize_hex_color',
+			) );
+
+			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nrec_section_about_button_contact_link_color', array(
+				'label'	   				=> __( 'Button contact link color', 'nandotess-resume' ),
+				'section'  				=> 'nr_section_about',
+				'settings' 				=> 'nrec_section_about_button_contact_link_color',
+				'priority' 				=> 7,
+			) ) );
+
+			/**
 			 * Section Skills
 			 */
-			$wp_customize->add_section( 'nandotess_resume_section_skills' , array(
+			$wp_customize->add_section( 'nrec_section_skills' , array(
 				'title'      			=> __( 'Section Skills', 'nandotess-resume-extra-content' ),
 				'priority'   			=> 29,
 			) );
@@ -46,30 +106,30 @@ if ( ! class_exists( 'NREC_Customizer' ) ) :
 			/**
 			 * Section Skills: Background Color
 			 */
-			$wp_customize->add_setting( 'nandotess_resume_section_skills_background_color', array(
+			$wp_customize->add_setting( 'nrec_section_skills_background_color', array(
 				'default'           	=> '#2196f3',
 				'sanitize_callback' 	=> 'sanitize_hex_color',
 			) );
 
-			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nandotess_resume_section_skills_background_color', array(
+			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nrec_section_skills_background_color', array(
 				'label'	   				=> __( 'Background color', 'nandotess-resume-extra-content' ),
-				'section'  				=> 'nandotess_resume_section_skills',
-				'settings' 				=> 'nandotess_resume_section_skills_background_color',
+				'section'  				=> 'nrec_section_skills',
+				'settings' 				=> 'nrec_section_skills_background_color',
 				'priority' 				=> 1,
 			) ) );
 
 			/**
 			 * Section Skills: Text Color
 			 */
-			$wp_customize->add_setting( 'nandotess_resume_section_skills_text_color', array(
+			$wp_customize->add_setting( 'nrec_section_skills_text_color', array(
 				'default'           	=> '#ffffff',
 				'sanitize_callback' 	=> 'sanitize_hex_color',
 			) );
 
-			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nandotess_resume_section_skills_text_color', array(
+			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nrec_section_skills_text_color', array(
 				'label'	   				=> __( 'Text color', 'nandotess-resume-extra-content' ),
-				'section'  				=> 'nandotess_resume_section_skills',
-				'settings' 				=> 'nandotess_resume_section_skills_text_color',
+				'section'  				=> 'nrec_section_skills',
+				'settings' 				=> 'nrec_section_skills_text_color',
 				'priority' 				=> 2,
 			) ) );
 		}
@@ -81,9 +141,14 @@ if ( ! class_exists( 'NREC_Customizer' ) ) :
 		 * @since 1.0.0
 		 */
 		public function sass_variables( $theme_mods ) {
-			$theme_mods['section_skills_background_color'] = get_theme_mod( 'nandotess_resume_section_skills_background_color' );
-			$theme_mods['section_skills_text_color']       = get_theme_mod( 'nandotess_resume_section_skills_text_color' );
-			return $theme_mods;
+			return array_merge( $theme_mods, array(
+				'section_about_button_cv_background_color'      => get_theme_mod( 'nrec_section_about_button_cv_background_color', '#2196f3' ),
+				'section_about_button_cv_link_color'            => get_theme_mod( 'nrec_section_about_button_cv_link_color', '#ffffff' ),
+				'section_about_button_contact_background_color' => get_theme_mod( 'nrec_section_about_button_contact_background_color', '#38de8a' ),
+				'section_about_button_contact_link_color'       => get_theme_mod( 'nrec_section_about_button_contact_link_color', '#ffffff' ),
+				'section_skills_background_color'               => get_theme_mod( 'nrec_section_skills_background_color', '#2196f3' ),
+				'section_skills_text_color'                     => get_theme_mod( 'nrec_section_skills_text_color', '#ffffff' ),
+			) );
 		}
 
 		/**
@@ -95,7 +160,7 @@ if ( ! class_exists( 'NREC_Customizer' ) ) :
 		public function sass_content( $scss ) {
 			global $wp_filesystem;
 
-			$scss_file = NandotessResume_Extra_Content()->plugin_url .'assets/css/scss/nandotess-resume-extra-content-customizer.scss';
+			$scss_file = NandotessResume_Extra_Content()->plugin_path .'assets/css/scss/nandotess-resume-extra-content-customizer.scss';
 			
 			if ( file_exists( $scss_file ) ) {
 				if ( empty( $wp_filesystem ) ) {

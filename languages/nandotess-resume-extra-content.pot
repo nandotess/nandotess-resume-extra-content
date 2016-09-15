@@ -15,14 +15,14 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-#: includes/class-nrec-customizer.php:42
+#: includes/class-nrec-customizer.php:102
 msgid "Section Skills"
 msgstr ""
 
-#: includes/class-nrec-customizer.php:55
+#: includes/class-nrec-customizer.php:115
 msgid "Background color"
 msgstr ""
 
-#: includes/class-nrec-customizer.php:70
+#: includes/class-nrec-customizer.php:130
 msgid "Text color"
 msgstr ""
