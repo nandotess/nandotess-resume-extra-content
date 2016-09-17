@@ -3,7 +3,7 @@
 		.section-buttons {
 			margin: 20px 0 0 0;
 
-			@media (min-width: $screen-md-min) {
+			@media (min-width: $screen_md_min) {
 				margin-top: 40px;
 			}
 
@@ -18,10 +18,23 @@
 				@include border-radius(0);
 				@include transition(background-color 300ms ease-in-out);
 
-				@media (min-width: $screen-md-min) {
+				@media (min-width: $screen_md_min) {
 					padding: {
 						left: 30px;
 						right: 30px;
+					}
+				}
+
+				.fa {
+					margin-left: 7.5px;
+					@include transition(transform 300ms ease-in-out);
+				}
+
+				&:hover,
+				&:active,
+				&:focus {
+					.fa {
+						@include transform(scale(1.3));
 					}
 				}
 
@@ -32,7 +45,7 @@
 					&:hover,
 					&:active,
 					&:focus {
-						background-color: lighten($section_about_button_cv_background_color, 10%);
+						background-color: lighten($section_about_button_cv_background_color, 5%);
 					}
 				}
 
@@ -43,7 +56,7 @@
 					&:hover,
 					&:active,
 					&:focus {
-						background-color: lighten($section_about_button_contact_background_color, 10%);
+						background-color: lighten($section_about_button_contact_background_color, 5%);
 					}
 				}
 			}
@@ -53,9 +66,30 @@
 	&.skills {
 		color: $section_skills_text_color;
 
+		.title {
+			color: $section_skills_title_color;
+		}
+
 		.col-md-12 {
 			background-color: $section_skills_background_color;
 			padding: 40px;
+		}
+	}
+
+	&.works {
+		color: $section_works_text_color;
+
+		.title {
+			color: $section_works_title_color;
+		}
+
+		.col-md-12 {
+			background-color: $section_works_background_color;
+			padding: 40px;
+		}
+
+		.date {
+			color: $section_works_date_color;
 		}
 	}
 }

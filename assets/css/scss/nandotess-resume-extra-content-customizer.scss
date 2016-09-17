@@ -9,7 +9,7 @@
 					&:hover,
 					&:active,
 					&:focus {
-						background-color: lighten($section_about_button_cv_background_color, 10%);
+						background-color: lighten($section_about_button_cv_background_color, 5%);
 					}
 				}
 
@@ -20,7 +20,7 @@
 					&:hover,
 					&:active,
 					&:focus {
-						background-color: lighten($section_about_button_contact_background_color, 10%);
+						background-color: lighten($section_about_button_contact_background_color, 5%);
 					}
 				}
 			}
@@ -30,8 +30,28 @@
 	&.skills {
 		color: $section_skills_text_color;
 
+		.title {
+			color: $section_skills_title_color;
+		}
+
 		.col-md-12 {
 			background-color: $section_skills_background_color;
+		}
+	}
+
+	&.works {
+		color: $section_works_text_color;
+
+		.title {
+			color: $section_works_title_color;
+		}
+
+		.col-md-12 {
+			background-color: $section_works_background_color;
+		}
+
+		.date {
+			color: $section_works_date_color;
 		}
 	}
 }

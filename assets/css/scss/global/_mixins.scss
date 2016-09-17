@@ -1,42 +1,62 @@
-@mixin box-sizing($box-sizing) {
-	-webkit-box-sizing: $box-sizing;
-	-moz-box-sizing: $box-sizing;
-	box-sizing: $box-sizing;
+// Multiple prefixes
+
+// Multiple prefixes: animation-...
+@mixin animation($sufix, $animation...) {
+	-webkit-animation-#{$sufix}: $animation;
+	animation-#{$sufix}: $animation;
 }
 
-@mixin box-shadow($box-shadow) {
-	-webkit-box-shadow: $box-shadow;
-	-moz-box-shadow: $box-shadow;
-	-o-box-shadow: $box-shadow;
-	box-shadow: $box-shadow;
+// Multiple prefixes: backface-visibility
+@mixin backface_visibility($backface_visibility) {
+	-webkit-backface-visibility: $backface_visibility;
+	backface-visibility: $backface_visibility;
 }
 
-@mixin text-shadow($text-shadow) {
-	-webkit-text-shadow: $text-shadow;
-	-moz-text-shadow: $text-shadow;
-	-o-text-shadow: $text-shadow;
-	text-shadow: $text-shadow;
+// Multiple prefixes: border-radius
+@mixin border-radius($border_radius) {
+	-webkit-border-radius: $border_radius;
+	-moz-border-radius: $border_radius;
+	-o-border-radius: $border_radius;
+	border-radius: $border_radius;
 }
 
-@mixin border-radius($border-radius) {
-	-webkit-border-radius: $border-radius;
-	-moz-border-radius: $border-radius;
-	-o-border-radius: $border-radius;
-	border-radius: $border-radius;
+// Multiple prefixes: box-sizing
+@mixin box-sizing($box_sizing) {
+	-webkit-box-sizing: $box_sizing;
+	-moz-box-sizing: $box_sizing;
+	box-sizing: $box_sizing;
 }
 
+// Multiple prefixes: box-shadow
+@mixin box-shadow($box_shadow) {
+	-webkit-box-shadow: $box_shadow;
+	-moz-box-shadow: $box_shadow;
+	-o-box-shadow: $box_shadow;
+	box-shadow: $box_shadow;
+}
+
+// Multiple prefixes: transform
+@mixin transform($transform) {
+	-webkit-transform: $transform;
+	-moz-transform: $transform;
+	-ms-transform: $transform;
+	-o-transform: $transform;
+	transform: $transform;
+}
+
+// Multiple prefixes: text-shadow
+@mixin text-shadow($text_shadow) {
+	-webkit-text-shadow: $text_shadow;
+	-moz-text-shadow: $text_shadow;
+	-o-text-shadow: $text_shadow;
+	text-shadow: $text_shadow;
+}
+
+// Multiple prefixes: transition
 @mixin transition($transition...) {
 	-webkit-transition: $transition;
 	-moz-transition: $transition;
 	-ms-transition: $transition;
 	-o-transition: $transition;
 	transition: $transition;
-}
-
-@mixin transform($transform...) {
-	-webkit-transform: $transform;
-	-moz-transform: $transform;
-	-ms-transform: $transform;
-	-o-transform: $transform;
-	transform: $transform;
 }

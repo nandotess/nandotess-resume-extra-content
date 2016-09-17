@@ -107,7 +107,7 @@ if ( ! class_exists( 'NREC_Customizer' ) ) :
 			 * Section Skills: Background Color
 			 */
 			$wp_customize->add_setting( 'nrec_section_skills_background_color', array(
-				'default'           	=> '#2196f3',
+				'default'           	=> '#ffffff',
 				'sanitize_callback' 	=> 'sanitize_hex_color',
 			) );
 
@@ -119,10 +119,25 @@ if ( ! class_exists( 'NREC_Customizer' ) ) :
 			) ) );
 
 			/**
+			 * Section Skills: Title Color
+			 */
+			$wp_customize->add_setting( 'nrec_section_skills_title_color', array(
+				'default'           	=> '#5f5f5f',
+				'sanitize_callback' 	=> 'sanitize_hex_color',
+			) );
+
+			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nrec_section_skills_title_color', array(
+				'label'	   				=> __( 'Title color', 'nandotess-resume-extra-content' ),
+				'section'  				=> 'nrec_section_skills',
+				'settings' 				=> 'nrec_section_skills_title_color',
+				'priority' 				=> 2,
+			) ) );
+
+			/**
 			 * Section Skills: Text Color
 			 */
 			$wp_customize->add_setting( 'nrec_section_skills_text_color', array(
-				'default'           	=> '#ffffff',
+				'default'           	=> '#727272',
 				'sanitize_callback' 	=> 'sanitize_hex_color',
 			) );
 
@@ -130,7 +145,75 @@ if ( ! class_exists( 'NREC_Customizer' ) ) :
 				'label'	   				=> __( 'Text color', 'nandotess-resume-extra-content' ),
 				'section'  				=> 'nrec_section_skills',
 				'settings' 				=> 'nrec_section_skills_text_color',
+				'priority' 				=> 3,
+			) ) );
+
+			/**
+			 * Section Works
+			 */
+			$wp_customize->add_section( 'nrec_section_works' , array(
+				'title'      			=> __( 'Section Works', 'nandotess-resume-extra-content' ),
+				'priority'   			=> 30,
+			) );
+
+			/**
+			 * Section Works: Background Color
+			 */
+			$wp_customize->add_setting( 'nrec_section_works_background_color', array(
+				'default'           	=> '#ffffff',
+				'sanitize_callback' 	=> 'sanitize_hex_color',
+			) );
+
+			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nrec_section_works_background_color', array(
+				'label'	   				=> __( 'Background color', 'nandotess-resume-extra-content' ),
+				'section'  				=> 'nrec_section_works',
+				'settings' 				=> 'nrec_section_works_background_color',
+				'priority' 				=> 1,
+			) ) );
+
+			/**
+			 * Section Works: Title Color
+			 */
+			$wp_customize->add_setting( 'nrec_section_works_title_color', array(
+				'default'           	=> '#5f5f5f',
+				'sanitize_callback' 	=> 'sanitize_hex_color',
+			) );
+
+			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nrec_section_works_title_color', array(
+				'label'	   				=> __( 'Title color', 'nandotess-resume-extra-content' ),
+				'section'  				=> 'nrec_section_works',
+				'settings' 				=> 'nrec_section_works_title_color',
 				'priority' 				=> 2,
+			) ) );
+
+			/**
+			 * Section Works: Text Color
+			 */
+			$wp_customize->add_setting( 'nrec_section_works_text_color', array(
+				'default'           	=> '#727272',
+				'sanitize_callback' 	=> 'sanitize_hex_color',
+			) );
+
+			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nrec_section_works_text_color', array(
+				'label'	   				=> __( 'Text color', 'nandotess-resume-extra-content' ),
+				'section'  				=> 'nrec_section_works',
+				'settings' 				=> 'nrec_section_works_text_color',
+				'priority' 				=> 3,
+			) ) );
+
+			/**
+			 * Section Works: Date Color
+			 */
+			$wp_customize->add_setting( 'nrec_section_works_date_color', array(
+				'default'           	=> '#2196f3',
+				'sanitize_callback' 	=> 'sanitize_hex_color',
+			) );
+
+			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nrec_section_works_date_color', array(
+				'label'	   				=> __( 'Date color', 'nandotess-resume-extra-content' ),
+				'section'  				=> 'nrec_section_works',
+				'settings' 				=> 'nrec_section_works_date_color',
+				'priority' 				=> 4,
 			) ) );
 		}
 
@@ -146,8 +229,15 @@ if ( ! class_exists( 'NREC_Customizer' ) ) :
 				'section_about_button_cv_link_color'            => get_theme_mod( 'nrec_section_about_button_cv_link_color', '#ffffff' ),
 				'section_about_button_contact_background_color' => get_theme_mod( 'nrec_section_about_button_contact_background_color', '#38de8a' ),
 				'section_about_button_contact_link_color'       => get_theme_mod( 'nrec_section_about_button_contact_link_color', '#ffffff' ),
-				'section_skills_background_color'               => get_theme_mod( 'nrec_section_skills_background_color', '#2196f3' ),
-				'section_skills_text_color'                     => get_theme_mod( 'nrec_section_skills_text_color', '#ffffff' ),
+				
+				'section_skills_background_color' => get_theme_mod( 'nrec_section_skills_background_color', '#ffffff' ),
+				'section_skills_title_color'      => get_theme_mod( 'nrec_section_skills_title_color', '#5f5f5f' ),
+				'section_skills_text_color'       => get_theme_mod( 'nrec_section_skills_text_color', '#727272' ),
+				
+				'section_works_background_color' => get_theme_mod( 'nrec_section_works_background_color', '#ffffff' ),
+				'section_works_title_color'      => get_theme_mod( 'nrec_section_works_title_color', '#5f5f5f' ),
+				'section_works_text_color'       => get_theme_mod( 'nrec_section_works_text_color', '#727272' ),
+				'section_works_date_color'       => get_theme_mod( 'nrec_section_works_date_color', '#2196f3' ),
 			) );
 		}
 
