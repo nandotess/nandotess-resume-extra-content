@@ -28,7 +28,6 @@ if ( ! class_exists( 'NREC_Frontend' ) ) :
 			add_action( 'nr_homepage', array( $this, 'homepage_section_skills' ), 30 );
 			add_action( 'nr_homepage', array( $this, 'homepage_section_works' ), 40 );
 			add_action( 'nr_homepage', array( $this, 'homepage_section_portfolio' ), 50 );
-			add_action( 'nr_homepage', array( $this, 'homepage_section_contact' ), 70 );
 		}
 
 		/**
@@ -75,7 +74,7 @@ if ( ! class_exists( 'NREC_Frontend' ) ) :
 				<div class="container">
 					<div class="row row-title">
 						<div class="col-md-12">
-							<h2 class="title"><span class="fa fa-cogs" aria-hidden="true"></span> Skills</h2>
+							<h2 class="title"><span class="fa fa-cogs" aria-hidden="true"></span> Relevant Skills</h2>
 						</div>
 					</div>
 					<div class="row row-content">
@@ -184,7 +183,7 @@ if ( ! class_exists( 'NREC_Frontend' ) ) :
 				<div class="container">
 					<div class="row row-title">
 						<div class="col-md-12">
-							<h2 class="title"><span class="fa fa-suitcase" aria-hidden="true"></span> Works</h2>
+							<h2 class="title"><span class="fa fa-suitcase" aria-hidden="true"></span> Work Experience</h2>
 						</div>
 					</div>
 					<div class="timeline">
@@ -297,39 +296,112 @@ if ( ! class_exists( 'NREC_Frontend' ) ) :
 					<div class="row row-content">
 						<div class="col-xs-12 col-sm-6 col-md-4">
 							<div class="box">
-								<h3 class="subtitle">Diário Catarinense</h3>
-								<div class="full-description">
-									<p class="meta">11 Jan 2015</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora.</p>
-								</div>
+								<a href="https://github.com/nandotess/nandotess-resume" target="_blank" rel="nofollow">
+									<h3 class="subtitle">nandotess's resume</h3>
+									<div class="full-description">
+										<p>WordPress Theme, Front-end</p>
+									</div>
+								</a>
 							</div>
 						</div>
-					</div>
-				</div>
-			</section>
-			<?php
-		}
-
-		/**
-		 * Homepage section contact
-		 *
-		 * @access  public
-		 * @since   1.0.0
-		 * @return  void
-		 */
-		public function homepage_section_contact() {
-			?>
-			<section id="contact" class="section contact">
-				<div class="container">
-					<div class="row row-title">
-						<div class="col-md-12">
-							<h2 class="title"><span class="fa fa-send" aria-hidden="true"></span> Contact</h2>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="box">
+								<a href="https://github.com/nandotess/nandotess-resume-extra-content" target="_blank" rel="nofollow">
+									<h3 class="subtitle">nandotess's resume extra content</h3>
+									<div class="full-description">
+										<p>WordPress Plugin, Front-end</p>
+									</div>
+								</a>
+							</div>
 						</div>
-					</div>
-					<div class="row row-content">
-						<div class="col-md-12">
-							<div class="full-description">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non augue eleifend, placerat nulla eget, sollicitudin nisl. Mauris auctor porttitor est, ut tempus risus sodales id. Morbi suscipit in arcu id tempor. Nam eleifend lobortis elit, vitae pellentesque neque ultricies sed. In sed magna interdum, dapibus neque non, pharetra lorem. Nullam venenatis libero nec fermentum convallis. Aenean posuere tortor ultricies risus feugiat, id placerat risus pharetra. Quisque porta ipsum id sodales rhoncus.</p>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="box">
+								<a href="https://github.com/nandotess/jquery.typer.js" target="_blank" rel="nofollow">
+									<h3 class="subtitle">jQuery Typer</h3>
+									<div class="full-description">
+										<p>Front-end</p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="box">
+								<a href="https://github.com/nandotess/really-simple-resume" target="_blank" rel="nofollow">
+									<h3 class="subtitle">Really Simple Resumé</h3>
+									<div class="full-description">
+										<p>Front-end</p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="box">
+								<a href="http://unisinos.fm/" target="_blank" rel="nofollow">
+									<h3 class="subtitle">Unisinos.fm</h3>
+									<div class="full-description">
+										<p>WordPress Theme, WordPress Plugin, Audio Streaming, JW Player</p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="box">
+								<a href="http://www.aniksuzuki.com.br/" target="_blank" rel="nofollow">
+									<h3 class="subtitle">ANK</h3>
+									<div class="full-description">
+										<p>WordPress Theme</p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="box">
+								<a href="http://dc.clicrbs.com.br/sc/" target="_blank" rel="nofollow">
+									<h3 class="subtitle">Diário Catarinense</h3>
+									<div class="full-description">
+										<p>Front-end, JSTL, XSL</p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="box">
+								<a href="http://comercial.gruporbs.com.br/" target="_blank" rel="nofollow">
+									<h3 class="subtitle">RBS Group Commercial</h3>
+									<div class="full-description">
+										<p>WordPress Theme</p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="box">
+								<a href="https://cobrancafacil.gruporbs.com.br/" target="_blank" rel="nofollow">
+									<h3 class="subtitle">RBS Group Collection</h3>
+									<div class="full-description">
+										<p>WordPress Theme, WS, SOAP</p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="box">
+								<a href="http://www.conexaoverao.com.br/" target="_blank" rel="nofollow">
+									<h3 class="subtitle">Conexão Verão</h3>
+									<div class="full-description">
+										<p>WordPress Theme, WordPress Plugin</p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="box">
+								<a href="http://atl.clicrbs.com.br/pretinhobasico/" target="_blank" rel="nofollow">
+									<h3 class="subtitle">Blogs Atlântida</h3>
+									<div class="full-description">
+										<p>WordPress Theme, WordPress Plugin</p>
+									</div>
+								</a>
 							</div>
 						</div>
 					</div>

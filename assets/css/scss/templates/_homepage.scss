@@ -82,8 +82,7 @@
 
 	&.skills,
 	&.works,
-	&.portfolio,
-	&.contact {
+	&.portfolio {
 		.title {
 			margin-bottom: 50px;
 			text-align: center;
@@ -268,6 +267,22 @@
 
 		.meta {
 			color: $section_works_meta_color;
+		}
+	}
+
+	&.portfolio {
+		.box {
+
+		}
+
+		.subtitle {
+
+		}
+
+		.full-description {
+			p {
+				
+			}
 		}
 	}
 }

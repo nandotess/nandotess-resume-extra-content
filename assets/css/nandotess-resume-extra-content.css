@@ -15,7 +15,7 @@
 @media (min-width: 768px) { .section.about .row-buttons .col-button-contact { text-align: left; } }
 .section.about .row-buttons .col-button-contact.btn { background-color: #38de8a; color: white; }
 .section.about .row-buttons .col-button-contact.btn:hover, .section.about .row-buttons .col-button-contact.btn:active, .section.about .row-buttons .col-button-contact.btn:focus { background-color: #4ee297; }
-.section.skills .title, .section.works .title, .section.portfolio .title, .section.contact .title { margin-bottom: 50px; text-align: center; }
+.section.skills .title, .section.works .title, .section.portfolio .title { margin-bottom: 50px; text-align: center; }
 .section.skills .box { padding: 0; }
 @media (min-width: 768px) { .section.skills .box { padding: 0 25px; } }
 @media (min-width: 992px) { .section.skills .box { padding: 0 45px; } }
