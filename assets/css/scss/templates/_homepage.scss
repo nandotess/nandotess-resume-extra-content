@@ -1,9 +1,9 @@
 .section {
 	&.about {
-		.section-buttons {
+		.row-buttons {
 			margin: 20px 0 0 0;
 
-			@media (min-width: $screen_md_min) {
+			@media (min-width: $screen-md-min) {
 				margin-top: 40px;
 			}
 
@@ -13,12 +13,13 @@
 					size: 15px;
 					weight: 500;
 				}
-				margin: 0 5px;
+				margin: 5px 0;
 				text-transform: uppercase;
 				@include border-radius(0);
 				@include transition(background-color 300ms ease-in-out);
 
-				@media (min-width: $screen_md_min) {
+				@media (min-width: $screen-md-min) {
+					margin: 0;
 					padding: {
 						left: 30px;
 						right: 30px;
@@ -37,8 +38,16 @@
 						@include transform(scale(1.3));
 					}
 				}
+			}
 
-				&.btn-default {
+			.col-button-cv {
+				text-align: center;
+
+				@media (min-width: $screen-sm-min) {
+					text-align: right;
+				}
+
+				&.btn {
 					background-color: $section_about_button_cv_background_color;
 					color: $section_about_button_cv_link_color;
 
@@ -48,8 +57,16 @@
 						background-color: lighten($section_about_button_cv_background_color, 5%);
 					}
 				}
+			}
 
-				&.btn-primary {
+			.col-button-contact {
+				text-align: center;
+
+				@media (min-width: $screen-sm-min) {
+					text-align: left;
+				}
+
+				&.btn {
 					background-color: $section_about_button_contact_background_color;
 					color: $section_about_button_contact_link_color;
 
@@ -63,6 +80,17 @@
 		}
 	}
 
+	&.skills,
+	&.works,
+	&.portfolio,
+	&.education,
+	&.contact {
+		.title {
+			margin-bottom: 30px;
+			text-align: center;
+		}
+	}
+
 	&.skills {
 		color: $section_skills_text_color;
 
@@ -70,9 +98,11 @@
 			color: $section_skills_title_color;
 		}
 
-		.col-md-12 {
-			background-color: $section_skills_background_color;
-			padding: 40px;
+		.row-content {
+			.col-md-12 {
+				background-color: $section_skills_background_color;
+				padding: 40px;
+			}
 		}
 	}
 
@@ -83,9 +113,11 @@
 			color: $section_works_title_color;
 		}
 
-		.col-md-12 {
-			background-color: $section_works_background_color;
-			padding: 40px;
+		.row-content {
+			.col-md-12 {
+				background-color: $section_works_background_color;
+				padding: 40px;
+			}
 		}
 
 		.date {
