@@ -30,34 +30,84 @@
 	}
 
 	&.skills {
-		color: $section_skills_text_color;
-
 		.title {
 			color: $section_skills_title_color;
 		}
 
-		.row-content {
-			.col-md-12 {
-				background-color: $section_skills_background_color;
-			}
+		.subtitle {
+			color: $section_skills_subtitle_color;
+		}
+
+		.progress {
+			background-color: rgba($section_skills_skill_background_color, 0.3);
+		}
+
+		.progress-bar {
+			background-color: $section_skills_skill_background_color;
+			color: $section_skills_skill_text_color;
 		}
 	}
 
 	&.works {
-		color: $section_works_text_color;
+		.timeline {
+			@media (min-width: $screen-sm-min) {
+				&:before {
+					background-color: $section_works_title_color;
+					-webkit-box-shadow: inset 0 -100px 100px -30px $background_color;
+					-moz-box-shadow: inset 0 -100px 100px -30px $background_color;
+					-o-box-shadow: inset 0 -100px 100px -30px $background_color;
+					box-shadow: inset 0 -100px 100px -30px $background_color;
+				}
+			}
+		}
+
+		.row-content {
+			.fa {
+				@media (min-width: $screen-sm-min) {
+					color: $section_works_title_color;
+				}
+			}
+		}
+
+		.box {
+			background-color: $section_works_background_color;
+			color: $section_works_text_color;
+		}
+
+		@media (min-width: $screen-sm-min) {
+			.row-content {
+				&:nth-child(even) {
+					.col-sm-6 {
+						.box {
+							&:before {
+								border-right-color: $section_works_background_color;
+							}
+						}
+					}
+				}
+
+				&:nth-child(odd) {
+					.col-sm-6 {
+						.box {
+							&:before {
+								border-left-color: $section_works_background_color;
+							}
+						}
+					}
+				}
+			}
+		}
 
 		.title {
 			color: $section_works_title_color;
 		}
 
-		.row-content {
-			.col-md-12 {
-				background-color: $section_works_background_color;
-			}
+		.subtitle {
+			color: $section_works_subtitle_color;
 		}
 
-		.date {
-			color: $section_works_date_color;
+		.meta {
+			color: $section_works_meta_color;
 		}
 	}
 }

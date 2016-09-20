@@ -79,9 +79,90 @@ if ( ! class_exists( 'NREC_Frontend' ) ) :
 						</div>
 					</div>
 					<div class="row row-content">
-						<div class="col-md-12">
-							<div class="full-description">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non augue eleifend, placerat nulla eget, sollicitudin nisl. Mauris auctor porttitor est, ut tempus risus sodales id. Morbi suscipit in arcu id tempor. Nam eleifend lobortis elit, vitae pellentesque neque ultricies sed. In sed magna interdum, dapibus neque non, pharetra lorem. Nullam venenatis libero nec fermentum convallis. Aenean posuere tortor ultricies risus feugiat, id placerat risus pharetra. Quisque porta ipsum id sodales rhoncus.</p>
+						<div class="box">
+							<div class="col-sm-12 col-md-4">
+								<h3 class="subtitle"><span class="fa fa-code" aria-hidden="true"></span> Front-end</h3>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">
+										<span class="skill">JavaScript</span>
+									</div>
+								</div>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
+										<span class="skill">HTML</span>
+									</div>
+								</div>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+										<span class="skill">CSS</span>
+									</div>
+								</div>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+										<span class="skill">Sass</span>
+									</div>
+								</div>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+										<span class="skill">jQuery</span>
+									</div>
+								</div>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+										<span class="skill">Bootstrap</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-12 col-md-4">
+								<h3 class="subtitle"><span class="fa fa-terminal" aria-hidden="true"></span> Back-end</h3>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+										<span class="skill">LAMP</span>
+									</div>
+								</div>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+										<span class="skill">WordPress</span>
+									</div>
+								</div>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+										<span class="skill">Smarty</span>
+									</div>
+								</div>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+										<span class="skill">CodeIgniter</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-12 col-md-4">
+								<h3 class="subtitle"><span class="fa fa-desktop" aria-hidden="true"></span> Dev</h3>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+										<span class="skill">Bower, Gulp, Composer</span>
+									</div>
+								</div>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+										<span class="skill">Responsive Web Design</span>
+									</div>
+								</div>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+										<span class="skill">Single-Page Applications</span>
+									</div>
+								</div>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
+										<span class="skill">SEO</span>
+									</div>
+								</div>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+										<span class="skill">High Performance Web Sites</span>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -106,10 +187,89 @@ if ( ! class_exists( 'NREC_Frontend' ) ) :
 							<h2 class="title"><span class="fa fa-suitcase" aria-hidden="true"></span> Works</h2>
 						</div>
 					</div>
-					<div class="row row-content">
-						<div class="col-md-12">
-							<div class="full-description">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non augue eleifend, placerat nulla eget, sollicitudin nisl. Mauris auctor porttitor est, ut tempus risus sodales id. Morbi suscipit in arcu id tempor. Nam eleifend lobortis elit, vitae pellentesque neque ultricies sed. In sed magna interdum, dapibus neque non, pharetra lorem. Nullam venenatis libero nec fermentum convallis. Aenean posuere tortor ultricies risus feugiat, id placerat risus pharetra. Quisque porta ipsum id sodales rhoncus.</p>
+					<div class="timeline">
+						<div class="row row-content">
+							<span class="fa fa-circle" aria-hidden="true"></span>
+							<div class="col-sm-6">
+								<div class="box">
+									<h3 class="subtitle">Senior Front-end and WordPress Developer</h3>
+									<div class="full-description">
+										<p class="meta">LightSpeed<br>Jun 2016 - Present<br>Cape Town, South Africa (remote)</p>
+										<p>Code WordPress themes and plugins. Update/maintain products. Provide support. Skills: LAMP, WordPress, JavaScript/jQuery, HTML5, CSS3, Bootstrap, Sass, Gulp.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row row-content">
+							<span class="fa fa-circle" aria-hidden="true"></span>
+							<div class="col-sm-6">
+								<div class="box">
+									<h3 class="subtitle">Front-end and WordPress Developer</h3>
+									<div class="full-description">
+										<p class="meta">Themify<br>Mar 2016 - Jun 2016<br>Toronto, Canada (remote)</p>
+										<p>Code WordPress themes and plugins. Update/maintain products. Provide support. Skills: LAMP, WordPress, JavaScript/jQuery, HTML5, CSS3.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row row-content">
+							<span class="fa fa-circle" aria-hidden="true"></span>
+							<div class="col-sm-6">
+								<div class="box">
+									<h3 class="subtitle">Co-founder and Technical Lead</h3>
+									<div class="full-description">
+										<p class="meta">SantoPixel Design &amp; Code<br>Oct 2012 - Mar 2016<br>Brazil (remote)</p>
+										<p>Code WordPress themes and plugins. Update/maintain products. Provide support. Skills: LAMP, WordPress, JavaScript/jQuery, HTML5, CSS3.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row row-content">
+							<span class="fa fa-circle" aria-hidden="true"></span>
+							<div class="col-sm-6">
+								<div class="box">
+									<h3 class="subtitle">IT Manager</h3>
+									<div class="full-description">
+										<p class="meta">Convertiva Mobile Marketing<br>May 2012 - Jun 2013<br>Brazil</p>
+										<p>Code CodeIgnter sites. Update/maintain products. Provide support. Skills: HTML5, CSS3, JavaScript/jQuery, LAMP, CodeIgniter, Memcached, Apache Solr.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row row-content">
+							<span class="fa fa-circle" aria-hidden="true"></span>
+							<div class="col-sm-6">
+								<div class="box">
+									<h3 class="subtitle">Technical Lead</h3>
+									<div class="full-description">
+										<p class="meta">RBS Group<br>May 2010 - May 2012<br>Brazil</p>
+										<p>Technical lead, web analyst and front-end developer (JSTL, XSL, JavaScript/jQuery).</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row row-content">
+							<span class="fa fa-circle" aria-hidden="true"></span>
+							<div class="col-sm-6">
+								<div class="box">
+									<h3 class="subtitle">Senior Web Developer</h3>
+									<div class="full-description">
+										<p class="meta">RBS Group<br>Mar 2007 - May 2010<br>Brazil</p>
+										<p>Front-end developer (JSTL, XSL, JavaScript).</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row row-content">
+							<span class="fa fa-circle" aria-hidden="true"></span>
+							<div class="col-sm-6">
+								<div class="box">
+									<h3 class="subtitle">Web Developer</h3>
+									<div class="full-description">
+										<p class="meta">SulSoftware Systems<br>Aug 2006 - Feb 2007<br>Brazil</p>
+										<p>UI designer, web standards developer (XHTML, CSS) and ASP programmer.</p>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -135,9 +295,13 @@ if ( ! class_exists( 'NREC_Frontend' ) ) :
 						</div>
 					</div>
 					<div class="row row-content">
-						<div class="col-md-12">
-							<div class="full-description">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non augue eleifend, placerat nulla eget, sollicitudin nisl. Mauris auctor porttitor est, ut tempus risus sodales id. Morbi suscipit in arcu id tempor. Nam eleifend lobortis elit, vitae pellentesque neque ultricies sed. In sed magna interdum, dapibus neque non, pharetra lorem. Nullam venenatis libero nec fermentum convallis. Aenean posuere tortor ultricies risus feugiat, id placerat risus pharetra. Quisque porta ipsum id sodales rhoncus.</p>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="box">
+								<h3 class="subtitle">Diário Catarinense</h3>
+								<div class="full-description">
+									<p class="meta">11 Jan 2015</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora.</p>
+								</div>
 							</div>
 						</div>
 					</div>

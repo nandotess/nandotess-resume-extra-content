@@ -3,6 +3,13 @@ $screen-sm-min: 768px;
 $screen-md-min: 992px;
 $screen-lg-min: 1200px;
 
+/// nandotess's resume
+
+/// Colors
+$background_color: #e3e3e3;
+
+/// nandotess's resume extra content
+
 /// Colors - Homepage section - About
 $section_about_button_cv_background_color:      #2196f3;
 $section_about_button_cv_link_color:            white;
@@ -10,12 +17,14 @@ $section_about_button_contact_background_color: #38de8a;
 $section_about_button_contact_link_color:       white;
 
 /// Colors - Homepage section - Skills
-$section_skills_background_color: white;
-$section_skills_title_color:      #5f5f5f;
-$section_skills_text_color:       #727272;
+$section_skills_title_color:            #5f5f5f;
+$section_skills_subtitle_color:         #5f5f5f;
+$section_skills_skill_background_color: #e3e3e3;
+$section_skills_skill_text_color:       #727272;
 
 /// Colors - Homepage section - Works
 $section_works_background_color: white;
 $section_works_title_color:      #5f5f5f;
+$section_works_subtitle_color:   #5f5f5f;
 $section_works_text_color:       #727272;
-$section_works_date_color:       #2196f3;
+$section_works_meta_color:       #2196f3;
