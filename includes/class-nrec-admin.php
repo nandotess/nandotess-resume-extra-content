@@ -17,13 +17,11 @@ if ( ! class_exists( 'NREC_Admin' ) ) :
 	 * The nandotess's resume extra content Admin Class
 	 */
 	class NREC_Admin {
-		
+
 		/**
 		 * Setup class
 		 */
-		public function __construct() {
-			
-		}
+		public function __construct() {}
 
 	}
 

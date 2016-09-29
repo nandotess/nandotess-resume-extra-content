@@ -46,3 +46,15 @@
 .section.works .title { color: #5f5f5f; }
 .section.works .subtitle { color: #5f5f5f; margin: 0 0 15px 0; }
 .section.works .meta { color: #2196f3; }
+.section.portfolio .title { color: #5f5f5f; }
+.section.portfolio .box { margin-bottom: 20px; }
+@media (min-width: 768px) { .section.portfolio .box { margin-bottom: 30px; } }
+.section.portfolio .box .subtitle { margin-top: 0; }
+.section.portfolio .box figure { overflow: hidden; position: relative; }
+.section.portfolio .box img { width: 100%; -webkit-transition: transform 300ms ease-in-out; -moz-transition: transform 300ms ease-in-out; -ms-transition: transform 300ms ease-in-out; -o-transition: transform 300ms ease-in-out; transition: transform 300ms ease-in-out; }
+.section.portfolio .box figcaption { background-color: rgba(0, 0, 0, 0.68); color: white; height: 100%; left: 0; opacity: 0; padding: 20px; position: absolute; top: 0; text-align: center; width: 100%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; flex-flow: row; -webkit-transition: opacity 300ms ease-in-out; -moz-transition: opacity 300ms ease-in-out; -ms-transition: opacity 300ms ease-in-out; -o-transition: opacity 300ms ease-in-out; transition: opacity 300ms ease-in-out; }
+@media (min-width: 768px) { .section.portfolio .box figcaption { padding: 30px; } }
+.section.portfolio .box figcaption .figcaption-content { width: 100%; align-items: center; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; flex-flow: column; justify-content: center; -webkit-transform: translate(0px, 15px); -moz-transform: translate(0px, 15px); -ms-transform: translate(0px, 15px); -o-transform: translate(0px, 15px); transform: translate(0px, 15px); -webkit-transition: transform 300ms ease-in-out; -moz-transition: transform 300ms ease-in-out; -ms-transition: transform 300ms ease-in-out; -o-transition: transform 300ms ease-in-out; transition: transform 300ms ease-in-out; }
+.section.portfolio .box figure:hover img, .section.portfolio .box figure:focus img { -webkit-transform: scale(1.1); -moz-transform: scale(1.1); -ms-transform: scale(1.1); -o-transform: scale(1.1); transform: scale(1.1); }
+.section.portfolio .box figure:hover figcaption, .section.portfolio .box figure:focus figcaption { opacity: 1; }
+.section.portfolio .box figure:hover figcaption .figcaption-content, .section.portfolio .box figure:focus figcaption .figcaption-content { -webkit-transform: translate(0px, 0px); -moz-transform: translate(0px, 0px); -ms-transform: translate(0px, 0px); -o-transform: translate(0px, 0px); transform: translate(0px, 0px); }

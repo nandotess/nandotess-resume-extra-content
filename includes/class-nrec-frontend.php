@@ -17,7 +17,7 @@ if ( ! class_exists( 'NREC_Frontend' ) ) :
 	 * The nandotess's resume extra content Frontend class
 	 */
 	class NREC_Frontend {
-		
+
 		/**
 		 * Setup class
 		 */
@@ -297,110 +297,187 @@ if ( ! class_exists( 'NREC_Frontend' ) ) :
 						<div class="col-xs-12 col-sm-6 col-md-4">
 							<div class="box">
 								<a href="https://github.com/nandotess/nandotess-resume" target="_blank" rel="nofollow">
-									<h3 class="subtitle">nandotess's resume</h3>
-									<div class="full-description">
-										<p>WordPress Theme, Front-end</p>
-									</div>
+									<figure>
+										<img src="http://demo.deviserweb.com/material-portfolio-cv-resume/assets/images/p-4.jpg" class="img-responsive">
+										<figcaption>
+											<div class="figcaption-content">
+												<h3 class="subtitle">nandotess's resume</h3>
+												<div class="full-description">
+													<p>WordPress Theme, Front-end</p>
+												</div>
+											</div>
+										</figcaption>
+									</figure>
 								</a>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-4">
 							<div class="box">
 								<a href="https://github.com/nandotess/nandotess-resume-extra-content" target="_blank" rel="nofollow">
-									<h3 class="subtitle">nandotess's resume extra content</h3>
-									<div class="full-description">
-										<p>WordPress Plugin, Front-end</p>
-									</div>
+									<figure>
+										<img src="http://demo.deviserweb.com/material-portfolio-cv-resume/assets/images/p-4.jpg" class="img-responsive">
+										<figcaption>
+											<div class="figcaption-content">
+												<h3 class="subtitle">nandotess's resume extra content</h3>
+												<div class="full-description">
+													<p>WordPress Plugin, Front-end</p>
+												</div>
+											</div>
+										</figcaption>
+									</figure>
 								</a>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-4">
 							<div class="box">
 								<a href="https://github.com/nandotess/jquery.typer.js" target="_blank" rel="nofollow">
-									<h3 class="subtitle">jQuery Typer</h3>
-									<div class="full-description">
-										<p>Front-end</p>
-									</div>
+									<figure>
+										<img src="http://demo.deviserweb.com/material-portfolio-cv-resume/assets/images/p-4.jpg" class="img-responsive">
+										<figcaption>
+											<div class="figcaption-content">
+												<h3 class="subtitle">jQuery Typer</h3>
+												<div class="full-description">
+													<p>Front-end</p>
+												</div>
+											</div>
+										</figcaption>
+									</figure>
 								</a>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-4">
 							<div class="box">
 								<a href="https://github.com/nandotess/really-simple-resume" target="_blank" rel="nofollow">
-									<h3 class="subtitle">Really Simple Resumé</h3>
-									<div class="full-description">
-										<p>Front-end</p>
-									</div>
+									<figure>
+										<img src="http://demo.deviserweb.com/material-portfolio-cv-resume/assets/images/p-4.jpg" class="img-responsive">
+										<figcaption>
+											<div class="figcaption-content">
+												<h3 class="subtitle">Really Simple Resumé</h3>
+												<div class="full-description">
+													<p>Front-end</p>
+												</div>
+											</div>
+										</figcaption>
+									</figure>
 								</a>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-4">
 							<div class="box">
 								<a href="http://unisinos.fm/" target="_blank" rel="nofollow">
-									<h3 class="subtitle">Unisinos.fm</h3>
-									<div class="full-description">
-										<p>WordPress Theme, WordPress Plugin, Audio Streaming, JW Player</p>
-									</div>
+									<figure>
+										<img src="http://demo.deviserweb.com/material-portfolio-cv-resume/assets/images/p-4.jpg" class="img-responsive">
+										<figcaption>
+											<div class="figcaption-content">
+												<h3 class="subtitle">Unisinos.fm</h3>
+												<div class="full-description">
+													<p>WordPress Theme, WordPress Plugin, Audio Streaming, JW Player</p>
+												</div>
+											</div>
+										</figcaption>
+									</figure>
 								</a>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-4">
 							<div class="box">
 								<a href="http://www.aniksuzuki.com.br/" target="_blank" rel="nofollow">
-									<h3 class="subtitle">ANK</h3>
-									<div class="full-description">
-										<p>WordPress Theme</p>
-									</div>
+									<figure>
+										<img src="http://demo.deviserweb.com/material-portfolio-cv-resume/assets/images/p-4.jpg" class="img-responsive">
+										<figcaption>
+											<div class="figcaption-content">
+												<h3 class="subtitle">ANK</h3>
+												<div class="full-description">
+													<p>WordPress Theme</p>
+												</div>
+											</div>
+										</figcaption>
+									</figure>
 								</a>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-4">
 							<div class="box">
 								<a href="http://dc.clicrbs.com.br/sc/" target="_blank" rel="nofollow">
-									<h3 class="subtitle">Diário Catarinense</h3>
-									<div class="full-description">
-										<p>Front-end, JSTL, XSL</p>
-									</div>
+									<figure>
+										<img src="http://demo.deviserweb.com/material-portfolio-cv-resume/assets/images/p-4.jpg" class="img-responsive">
+										<figcaption>
+											<div class="figcaption-content">
+												<h3 class="subtitle">Diário Catarinense</h3>
+												<div class="full-description">
+													<p>Front-end, JSTL, XSL</p>
+												</div>
+											</div>
+										</figcaption>
+									</figure>
 								</a>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-4">
 							<div class="box">
 								<a href="http://comercial.gruporbs.com.br/" target="_blank" rel="nofollow">
-									<h3 class="subtitle">RBS Group Commercial</h3>
-									<div class="full-description">
-										<p>WordPress Theme</p>
-									</div>
+									<figure>
+										<img src="http://demo.deviserweb.com/material-portfolio-cv-resume/assets/images/p-4.jpg" class="img-responsive">
+										<figcaption>
+											<div class="figcaption-content">
+												<h3 class="subtitle">RBS Group Commercial</h3>
+												<div class="full-description">
+													<p>WordPress Theme</p>
+												</div>
+											</div>
+										</figcaption>
+									</figure>
 								</a>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-4">
 							<div class="box">
 								<a href="https://cobrancafacil.gruporbs.com.br/" target="_blank" rel="nofollow">
-									<h3 class="subtitle">RBS Group Collection</h3>
-									<div class="full-description">
-										<p>WordPress Theme, WS, SOAP</p>
-									</div>
+									<figure>
+										<img src="http://demo.deviserweb.com/material-portfolio-cv-resume/assets/images/p-4.jpg" class="img-responsive">
+										<figcaption>
+											<div class="figcaption-content">
+												<h3 class="subtitle">RBS Group Collection</h3>
+												<div class="full-description">
+													<p>WordPress Theme, WS, SOAP</p>
+												</div>
+											</div>
+										</figcaption>
+									</figure>
 								</a>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-4">
 							<div class="box">
 								<a href="http://www.conexaoverao.com.br/" target="_blank" rel="nofollow">
-									<h3 class="subtitle">Conexão Verão</h3>
-									<div class="full-description">
-										<p>WordPress Theme, WordPress Plugin</p>
-									</div>
+									<figure>
+										<img src="http://demo.deviserweb.com/material-portfolio-cv-resume/assets/images/p-4.jpg" class="img-responsive">
+										<figcaption>
+											<div class="figcaption-content">
+												<h3 class="subtitle">Conexão Verão</h3>
+												<div class="full-description">
+													<p>WordPress Theme, WordPress Plugin</p>
+												</div>
+											</div>
+										</figcaption>
+									</figure>
 								</a>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-4">
 							<div class="box">
 								<a href="http://atl.clicrbs.com.br/pretinhobasico/" target="_blank" rel="nofollow">
-									<h3 class="subtitle">Blogs Atlântida</h3>
-									<div class="full-description">
-										<p>WordPress Theme, WordPress Plugin</p>
-									</div>
+									<figure>
+										<img src="http://demo.deviserweb.com/material-portfolio-cv-resume/assets/images/p-4.jpg" class="img-responsive">
+										<figcaption>
+											<div class="figcaption-content">
+												<h3 class="subtitle">Blogs Atlântida</h3>
+												<div class="full-description">
+													<p>WordPress Theme, WordPress Plugin</p>
+												</div>
+											</div>
+										</figcaption>
+									</figure>
 								</a>
 							</div>
 						</div>

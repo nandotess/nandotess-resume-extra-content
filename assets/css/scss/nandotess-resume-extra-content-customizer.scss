@@ -110,4 +110,17 @@
 			color: $section_works_meta_color;
 		}
 	}
+
+	&.portfolio {
+		.title {
+			color: $section_portfolio_title_color;
+		}
+		
+		.box {
+			figcaption {
+				background-color: rgba($section_portfolio_background_text_color, 0.68);
+				color: $section_portfolio_text_color;
+			}
+		}
+	}
 }

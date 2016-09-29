@@ -19,7 +19,7 @@ msgstr ""
 msgid "Section Skills"
 msgstr ""
 
-#: includes/class-nrec-customizer.php:115, includes/class-nrec-customizer.php:198
+#: includes/class-nrec-customizer.php:115, includes/class-nrec-customizer.php:198, includes/class-nrec-customizer.php:266
 msgid "Title color"
 msgstr ""
 
@@ -43,10 +43,18 @@ msgstr ""
 msgid "Background color"
 msgstr ""
 
-#: includes/class-nrec-customizer.php:228
+#: includes/class-nrec-customizer.php:228, includes/class-nrec-customizer.php:296
 msgid "Text color"
 msgstr ""
 
 #: includes/class-nrec-customizer.php:243
 msgid "Date color"
+msgstr ""
+
+#: includes/class-nrec-customizer.php:253
+msgid "Section Portfolio"
+msgstr ""
+
+#: includes/class-nrec-customizer.php:281
+msgid "Background Text color"
 msgstr ""

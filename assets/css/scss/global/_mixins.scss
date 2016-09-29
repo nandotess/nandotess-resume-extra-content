@@ -60,3 +60,25 @@
 	-o-transition: $transition;
 	transition: $transition;
 }
+
+// Complex functions
+
+// Display flex (row)
+@mixin display-flex-row {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-flow: row;
+}
+
+// Display flex (column)
+@mixin display-flex-column {
+	align-items: center;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+}
