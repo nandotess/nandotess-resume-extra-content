@@ -25,21 +25,21 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since  1.0.0
  * @return object NandotessResume_Extra_Content
  */
-function NandotessResume_Extra_Content() {
+function nandotess_resume_extra_content() {
 	return NandotessResume_Extra_Content::instance();
 }
 
-NandotessResume_Extra_Content();
+nandotess_resume_extra_content();
 
 /**
- * Main NandotessResume_Extra_Content Class
+ * Main Class
  *
  * @class NandotessResume_Extra_Content
  * @since 1.0.0
  * @package nandotess-resume-extra-content
  */
 final class NandotessResume_Extra_Content {
-	
+
 	/**
 	 * NandotessResume_Extra_Content The single instance of NandotessResume_Extra_Content
 	 *

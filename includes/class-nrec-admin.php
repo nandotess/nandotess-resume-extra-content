@@ -1,6 +1,6 @@
 <?php
 /**
- * nandotess's resume extra content Admin Class
+ * Admin Class
  *
  * @author   Fernando Tessmann
  * @since    1.0.0

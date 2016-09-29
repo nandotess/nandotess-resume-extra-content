@@ -1,6 +1,6 @@
 <?php
 /**
- * nandotess's resume extra content Frontend class
+ * Frontend class
  *
  * @author   Fernando Tessmann
  * @since    1.0.0
@@ -24,7 +24,7 @@ if ( ! class_exists( 'NREC_Frontend' ) ) :
 		public function __construct() {
 			add_action( 'wp_enqueue_scripts',      array( $this, 'enqueue_frontend_scripts' ), 9999 );
 			add_action( 'nr_section_about_bottom', array( $this, 'homepage_section_about_buttons' ) );
-			
+
 			add_action( 'nr_homepage', array( $this, 'homepage_section_skills' ), 30 );
 			add_action( 'nr_homepage', array( $this, 'homepage_section_works' ), 40 );
 			add_action( 'nr_homepage', array( $this, 'homepage_section_portfolio' ), 50 );
@@ -38,7 +38,7 @@ if ( ! class_exists( 'NREC_Frontend' ) ) :
 		 * @return  void
 		 */
 		public function enqueue_frontend_scripts() {
-			wp_enqueue_style( 'nandotess-resume-extra-content-style', NandotessResume_Extra_Content()->plugin_url . 'assets/css/nandotess-resume-extra-content.css', array(), NandotessResume_Extra_Content()->version, 'all' );
+			wp_enqueue_style( 'nandotess-resume-extra-content-style', nandotess_resume_extra_content()->plugin_url . 'assets/css/nandotess-resume-extra-content.css', array(), nandotess_resume_extra_content()->version, 'all' );
 		}
 
 		/**

@@ -1,6 +1,6 @@
 <?php
 /**
- * nandotess's resume extra content Customizer Class
+ * Customizer Class
  *
  * @author   Fernando Tessmann
  * @since    1.0.0
@@ -64,7 +64,7 @@ if ( ! class_exists( 'NREC_Customizer' ) ) :
 				'settings'          => 'nrec_section_about_button_cv_link_color',
 				'priority'          => 5,
 			) ) );
-			
+
 			/**
 			 * Section About: Button Contact Background Color
 			 */
@@ -301,7 +301,7 @@ if ( ! class_exists( 'NREC_Customizer' ) ) :
 		}
 
 		/**
-		 * 
+		 * ????
 		 *
 		 * @param array $theme_mods Theme mods array
 		 * @since 1.0.0
@@ -312,12 +312,12 @@ if ( ! class_exists( 'NREC_Customizer' ) ) :
 				'section_about_button_cv_link_color'            => get_theme_mod( 'nrec_section_about_button_cv_link_color', '#ffffff' ),
 				'section_about_button_contact_background_color' => get_theme_mod( 'nrec_section_about_button_contact_background_color', '#38de8a' ),
 				'section_about_button_contact_link_color'       => get_theme_mod( 'nrec_section_about_button_contact_link_color', '#ffffff' ),
-				
+
 				'section_skills_title_color'                    => get_theme_mod( 'nrec_section_skills_title_color', '#5f5f5f' ),
 				'section_skills_subtitle_color'                 => get_theme_mod( 'nrec_section_skills_subtitle_color', '#5f5f5f' ),
 				'section_skills_skill_background_color'         => get_theme_mod( 'nrec_section_skills_skill_background_color', '#ffffff' ),
 				'section_skills_skill_text_color'               => get_theme_mod( 'nrec_section_skills_skill_text_color', '#727272' ),
-				
+
 				'section_works_background_color'                => get_theme_mod( 'nrec_section_works_background_color', '#ffffff' ),
 				'section_works_title_color'                     => get_theme_mod( 'nrec_section_works_title_color', '#5f5f5f' ),
 				'section_works_subtitle_color'                  => get_theme_mod( 'nrec_section_works_subtitle_color', '#5f5f5f' ),
@@ -331,7 +331,7 @@ if ( ! class_exists( 'NREC_Customizer' ) ) :
 		}
 
 		/**
-		 * 
+		 * ??
 		 *
 		 * @param string $scss css content
 		 * @since 1.0.0
@@ -339,11 +339,11 @@ if ( ! class_exists( 'NREC_Customizer' ) ) :
 		public function sass_content( $scss ) {
 			global $wp_filesystem;
 
-			$scss_file = NandotessResume_Extra_Content()->plugin_path .'assets/css/scss/nandotess-resume-extra-content-customizer.scss';
-			
+			$scss_file = nandotess_resume_extra_content()->plugin_path . 'assets/css/scss/nandotess-resume-extra-content-customizer.scss';
+
 			if ( file_exists( $scss_file ) ) {
 				if ( empty( $wp_filesystem ) ) {
-					require_once( ABSPATH .'/wp-admin/includes/file.php' );
+					require_once( ABSPATH . '/wp-admin/includes/file.php' );
 					WP_Filesystem();
 				}
 
