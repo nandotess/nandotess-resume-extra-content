@@ -88,7 +88,7 @@ if ( ! class_exists( 'NREC_Frontend' ) ) :
 
 			$categories = get_terms( $args );
 
-			if ( sizeof( $categories ) > 0 ) :
+			if ( count( $categories ) > 0 ) :
 				?>
 				
 					<section id="skills" class="section skills">
@@ -110,21 +110,21 @@ if ( ! class_exists( 'NREC_Frontend' ) ) :
 												$category_badge = 'fa-cog';
 											}
 
+											$args_tax_query  => array(
+												'taxonomy' => 'skill-category',
+												'field'    => 'slug',
+												'terms'    => $category->slug,
+											);
+
 											$args = array(
 												'post_type'      => 'skill',
 												'posts_per_page' => 99,
-												'tax_query'      => array(
-													array(
-														'taxonomy' => 'skill-category',
-														'field'    => 'slug',
-														'terms'    => $category->slug,
-													)
-												)
+												'tax_query'      => array( $args_tax_query ),
 											);
 
 											$skills = get_posts( $args );
 
-											if ( sizeof( $skills ) > 0 ) :
+											if ( count( $skills ) > 0 ) :
 												?>
 
 													<div class="col-sm-12 col-md-4">
@@ -180,7 +180,7 @@ if ( ! class_exists( 'NREC_Frontend' ) ) :
 
 			$works = get_posts( $args );
 
-			if ( sizeof( $works ) > 0 ) :
+			if ( count( $works ) > 0 ) :
 				?>
 					
 					<section id="works" class="section works">
@@ -213,8 +213,7 @@ if ( ! class_exists( 'NREC_Frontend' ) ) :
 
 										if ( ! empty( $work_time_period['work-current'] ) ) {
 											$work_date_to = esc_html__( 'Present', 'nandotess-resume-extra-content' );
-										}
-										elseif ( ! empty( $work_time_period['work-date-to'] ) ) {
+										} elseif ( ! empty( $work_time_period['work-date-to'] ) ) {
 											$work_date_to = $work_time_period['work-date-to'];
 											$work_date_to = strtotime( $work_date_to );
 											$work_date_to = date( 'F Y', $work_date_to );
@@ -277,7 +276,7 @@ if ( ! class_exists( 'NREC_Frontend' ) ) :
 
 			$portfolio = get_posts( $args );
 
-			if ( sizeof( $portfolio ) > 0 ) :
+			if ( count( $portfolio ) > 0 ) :
 				?>
 					
 					<section id="portfolio" class="section portfolio">

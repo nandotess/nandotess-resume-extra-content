@@ -24,12 +24,12 @@ if ( ! class_exists( 'NREC_PostType_Skill' ) ) :
 		public function __construct() {
 			add_action( 'init',                            array( $this, 'register_post_types' ) );
 			add_action( 'init',                            array( $this, 'register_taxonomies' ) );
-			
-			add_filter( 'cmb_meta_boxes',                  array( $this, 'metaboxes') );
+
+			add_filter( 'cmb_meta_boxes',                  array( $this, 'metaboxes' ) );
 
 			add_action( 'skill-category_add_form_fields',  array( $this, 'add_taxonomies_fields' ) );
 			add_action( 'skill-category_edit_form_fields', array( $this, 'add_taxonomies_fields' ) );
-			
+
 			add_action( 'create_skill-category',           array( $this, 'save_taxonomies_fields' ) );
 			add_action( 'edited_skill-category',           array( $this, 'save_taxonomies_fields' ) );
 		}
@@ -136,8 +136,9 @@ if ( ! class_exists( 'NREC_PostType_Skill' ) ) :
 		 * Save custom fields in taxonomies
 		 */
 		public function save_taxonomies_fields( $term_id = 0 ) {
-			$meta = ! empty( $_POST['skill-badge'] ) ? $_POST['skill-badge'] : '';
-			
+			$meta = sanitize_text_field( wp_unslash( $_POST['skill-badge'] ) );
+			$meta = ! empty( $meta ) ? $meta : '';
+
 			if ( empty( $meta ) ) {
 				delete_term_meta( $term_id, 'skill-badge' );
 			} else {

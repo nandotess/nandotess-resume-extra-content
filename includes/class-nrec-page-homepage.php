@@ -22,7 +22,7 @@ if ( ! class_exists( 'NREC_Page_Homepage' ) ) :
 		 * Setup class
 		 */
 		public function __construct() {
-			add_filter( 'cmb_meta_boxes', array( $this, 'metaboxes') );
+			add_filter( 'cmb_meta_boxes', array( $this, 'metaboxes' ) );
 		}
 
 		/**

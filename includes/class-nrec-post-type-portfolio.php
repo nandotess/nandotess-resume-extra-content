@@ -23,7 +23,7 @@ if ( ! class_exists( 'NREC_PostType_Portfolio' ) ) :
 		 */
 		public function __construct() {
 			add_action( 'init',           array( $this, 'register_post_types' ) );
-			add_filter( 'cmb_meta_boxes', array( $this, 'metaboxes') );
+			add_filter( 'cmb_meta_boxes', array( $this, 'metaboxes' ) );
 		}
 
 		/**
