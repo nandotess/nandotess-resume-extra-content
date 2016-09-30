@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! class_exists( 'NREC_Customizer' ) ) :
 
 	/**
-	 * The nandotess's resume extra content Customizer class
+	 * Customizer Class
 	 */
 	class NREC_Customizer {
 

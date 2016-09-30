@@ -58,3 +58,235 @@ msgstr ""
 #: includes/class-nrec-customizer.php:281
 msgid "Background Text color"
 msgstr ""
+
+#: includes/class-nrec-frontend.php:215
+msgid "Present"
+msgstr ""
+
+#: includes/class-nrec-page-homepage.php:36
+msgid "Resume"
+msgstr ""
+
+#: includes/class-nrec-page-homepage.php:47
+msgid "Homepage extra content."
+msgstr ""
+
+#: includes/class-nrec-post-type-portfolio.php:34, includes/class-nrec-post-type-portfolio.php:35, includes/class-nrec-post-type-portfolio.php:46
+msgid "Portfolio"
+msgstr ""
+
+#: includes/class-nrec-post-type-portfolio.php:36, includes/class-nrec-post-type-skill.php:44, includes/class-nrec-post-type-work-experience.php:36
+msgid "Add New"
+msgstr ""
+
+#: includes/class-nrec-post-type-portfolio.php:37
+msgid "Add New Portfolio"
+msgstr ""
+
+#: includes/class-nrec-post-type-portfolio.php:38
+msgid "Edit Portfolio"
+msgstr ""
+
+#: includes/class-nrec-post-type-portfolio.php:39
+msgid "New Portfolio"
+msgstr ""
+
+#: includes/class-nrec-post-type-portfolio.php:40
+msgid "View Portfolio"
+msgstr ""
+
+#: includes/class-nrec-post-type-portfolio.php:41
+msgid "Search Portfolio"
+msgstr ""
+
+#: includes/class-nrec-post-type-portfolio.php:42
+msgid "No Portfolio found"
+msgstr ""
+
+#: includes/class-nrec-post-type-portfolio.php:43
+msgid "No Portfolio found in Trash"
+msgstr ""
+
+#: includes/class-nrec-post-type-portfolio.php:45
+msgid "All Portfolio"
+msgstr ""
+
+#: includes/class-nrec-post-type-portfolio.php:75
+msgid "External Link"
+msgstr ""
+
+#: includes/class-nrec-post-type-portfolio.php:85
+msgid "Portfolio details."
+msgstr ""
+
+#: includes/class-nrec-post-type-skill.php:42, includes/class-nrec-post-type-skill.php:54
+msgid "Skills"
+msgstr ""
+
+#: includes/class-nrec-post-type-skill.php:43
+msgid "Skill"
+msgstr ""
+
+#: includes/class-nrec-post-type-skill.php:45
+msgid "Add New Skill"
+msgstr ""
+
+#: includes/class-nrec-post-type-skill.php:46
+msgid "Edit Skill"
+msgstr ""
+
+#: includes/class-nrec-post-type-skill.php:47
+msgid "New Skill"
+msgstr ""
+
+#: includes/class-nrec-post-type-skill.php:48
+msgid "View Skill"
+msgstr ""
+
+#: includes/class-nrec-post-type-skill.php:49
+msgid "Search Skills"
+msgstr ""
+
+#: includes/class-nrec-post-type-skill.php:50
+msgid "No skills found"
+msgstr ""
+
+#: includes/class-nrec-post-type-skill.php:51
+msgid "No skills found in Trash"
+msgstr ""
+
+#: includes/class-nrec-post-type-skill.php:53
+msgid "All Skills"
+msgstr ""
+
+#: includes/class-nrec-post-type-skill.php:80, includes/class-nrec-post-type-skill.php:83
+msgid "Skill Categories"
+msgstr ""
+
+#: includes/class-nrec-post-type-skill.php:81
+msgid "Skill Category"
+msgstr ""
+
+#: includes/class-nrec-post-type-skill.php:82
+msgid "Categories"
+msgstr ""
+
+#: includes/class-nrec-post-type-skill.php:84
+msgid "Edit Skill Category"
+msgstr ""
+
+#: includes/class-nrec-post-type-skill.php:85
+msgid "View Skill Category"
+msgstr ""
+
+#: includes/class-nrec-post-type-skill.php:86
+msgid "Update Skill Category"
+msgstr ""
+
+#: includes/class-nrec-post-type-skill.php:87
+msgid "Add New Skill Category"
+msgstr ""
+
+#: includes/class-nrec-post-type-skill.php:88
+msgid "New Skill Category"
+msgstr ""
+
+#: includes/class-nrec-post-type-skill.php:89
+msgid "Parent"
+msgstr ""
+
+#: includes/class-nrec-post-type-skill.php:90
+msgid "Search Skill Categories"
+msgstr ""
+
+#: includes/class-nrec-post-type-skill.php:123
+msgid "Badge"
+msgstr ""
+
+#: includes/class-nrec-post-type-skill.php:128
+msgid "Icon slug/badget from FontAwesome Icons, example: fa-cog."
+msgstr ""
+
+#: includes/class-nrec-post-type-skill.php:156
+msgid "Proficiency"
+msgstr ""
+
+#: includes/class-nrec-post-type-skill.php:158
+msgid "Number from 0 to 100."
+msgstr ""
+
+#: includes/class-nrec-post-type-skill.php:167
+msgid "Skill details."
+msgstr ""
+
+#: includes/class-nrec-post-type-work-experience.php:34
+msgid "Work Experiences"
+msgstr ""
+
+#: includes/class-nrec-post-type-work-experience.php:35
+msgid "Work Experience"
+msgstr ""
+
+#: includes/class-nrec-post-type-work-experience.php:37
+msgid "Add New Work Experience"
+msgstr ""
+
+#: includes/class-nrec-post-type-work-experience.php:38
+msgid "Edit Work Experience"
+msgstr ""
+
+#: includes/class-nrec-post-type-work-experience.php:39
+msgid "New Work Experience"
+msgstr ""
+
+#: includes/class-nrec-post-type-work-experience.php:40
+msgid "View Work Experience"
+msgstr ""
+
+#: includes/class-nrec-post-type-work-experience.php:41
+msgid "Search Work Experiences"
+msgstr ""
+
+#: includes/class-nrec-post-type-work-experience.php:42
+msgid "No work experiences found"
+msgstr ""
+
+#: includes/class-nrec-post-type-work-experience.php:43
+msgid "No work experiences found in Trash"
+msgstr ""
+
+#: includes/class-nrec-post-type-work-experience.php:45
+msgid "All Work Experiences"
+msgstr ""
+
+#: includes/class-nrec-post-type-work-experience.php:46
+msgid "Experiences"
+msgstr ""
+
+#: includes/class-nrec-post-type-work-experience.php:75
+msgid "Company name"
+msgstr ""
+
+#: includes/class-nrec-post-type-work-experience.php:81
+msgid "Location"
+msgstr ""
+
+#: includes/class-nrec-post-type-work-experience.php:89
+msgid "Date from"
+msgstr ""
+
+#: includes/class-nrec-post-type-work-experience.php:95
+msgid "Date to"
+msgstr ""
+
+#: includes/class-nrec-post-type-work-experience.php:101
+msgid "I currently work here"
+msgstr ""
+
+#: includes/class-nrec-post-type-work-experience.php:107
+msgid "Time period"
+msgstr ""
+
+#: includes/class-nrec-post-type-work-experience.php:118
+msgid "Work experience details."
+msgstr ""

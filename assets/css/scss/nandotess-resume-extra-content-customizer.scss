@@ -49,6 +49,10 @@
 	}
 
 	&.works {
+		.title {
+			color: $section_works_title_color;
+		}
+
 		.timeline {
 			@media (min-width: $screen-sm-min) {
 				&:before {
@@ -96,10 +100,6 @@
 					}
 				}
 			}
-		}
-
-		.title {
-			color: $section_works_title_color;
 		}
 
 		.subtitle {

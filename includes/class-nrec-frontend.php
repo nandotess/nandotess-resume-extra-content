@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! class_exists( 'NREC_Frontend' ) ) :
 
 	/**
-	 * The nandotess's resume extra content Frontend class
+	 * Frontend class
 	 */
 	class NREC_Frontend {
 
@@ -49,15 +49,27 @@ if ( ! class_exists( 'NREC_Frontend' ) ) :
 		 * @return  void
 		 */
 		public function homepage_section_about_buttons() {
+			$mail         = get_theme_mod( 'nr_mail', 'mail@mail.com' );
+			$file_resume  = get_post_meta( get_the_id(), 'file-resume', true );
 			?>
-			<div class="row row-buttons">
-				<div class="col-xs-12 col-sm-6 col-button-cv">
-					<a href="#" class="btn btn-default btn-lg">Download CV <span class="fa fa-download" aria-hidden="true"></span></a>
+
+				<div class="row row-buttons">
+					
+					<?php if ( ! empty( $file_resume ) ) : ?>
+						
+						<?php $file_resume = wp_get_attachment_url( $file_resume ); ?>
+
+						<div class="col-xs-12 col-sm-6 col-button col-button-cv">
+							<a href="<?php echo esc_url( $file_resume ) ?>" target="_blank" class="btn btn-default btn-lg">Download CV <span class="fa fa-download" aria-hidden="true"></span></a>
+						</div>
+
+					<?php endif; ?>
+					
+					<div class="<?php echo empty( $file_resume ) ? 'col-xs-12' : 'col-xs-12 col-sm-6'; ?> col-button col-button-contact">
+						<a href="mailto:<?php echo esc_attr( $mail ); ?>" class="btn btn-primary btn-lg">Contact me <span class="fa fa-send" aria-hidden="true"></span></a>
+					</div>
 				</div>
-				<div class="col-xs-12 col-sm-6 col-button-contact">
-					<a href="#" class="btn btn-primary btn-lg">Contact me <span class="fa fa-send" aria-hidden="true"></span></a>
-				</div>
-			</div>
+
 			<?php
 		}
 
@@ -69,105 +81,88 @@ if ( ! class_exists( 'NREC_Frontend' ) ) :
 		 * @return  void
 		 */
 		public function homepage_section_skills() {
-			?>
-			<section id="skills" class="section skills">
-				<div class="container">
-					<div class="row row-title">
-						<div class="col-md-12">
-							<h2 class="title"><span class="fa fa-cogs" aria-hidden="true"></span> Relevant Skills</h2>
-						</div>
-					</div>
-					<div class="row row-content">
-						<div class="box">
-							<div class="col-sm-12 col-md-4">
-								<h3 class="subtitle"><span class="fa fa-code" aria-hidden="true"></span> Front-end</h3>
-								<div class="progress">
-									<div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">
-										<span class="skill">JavaScript</span>
-									</div>
-								</div>
-								<div class="progress">
-									<div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
-										<span class="skill">HTML</span>
-									</div>
-								</div>
-								<div class="progress">
-									<div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
-										<span class="skill">CSS</span>
-									</div>
-								</div>
-								<div class="progress">
-									<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-										<span class="skill">Sass</span>
-									</div>
-								</div>
-								<div class="progress">
-									<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
-										<span class="skill">jQuery</span>
-									</div>
-								</div>
-								<div class="progress">
-									<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-										<span class="skill">Bootstrap</span>
-									</div>
+			$args = array(
+				'taxonomy'   => 'skill-category',
+				'hide_empty' => false,
+			);
+
+			$categories = get_terms( $args );
+
+			if ( sizeof( $categories ) > 0 ) :
+				?>
+				
+					<section id="skills" class="section skills">
+						<div class="container">
+							<div class="row row-title">
+								<div class="col-md-12">
+									<h2 class="title"><span class="fa fa-cogs" aria-hidden="true"></span> Relevant Skills</h2>
 								</div>
 							</div>
-							<div class="col-sm-12 col-md-4">
-								<h3 class="subtitle"><span class="fa fa-terminal" aria-hidden="true"></span> Back-end</h3>
-								<div class="progress">
-									<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
-										<span class="skill">LAMP</span>
-									</div>
-								</div>
-								<div class="progress">
-									<div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
-										<span class="skill">WordPress</span>
-									</div>
-								</div>
-								<div class="progress">
-									<div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
-										<span class="skill">Smarty</span>
-									</div>
-								</div>
-								<div class="progress">
-									<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
-										<span class="skill">CodeIgniter</span>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-12 col-md-4">
-								<h3 class="subtitle"><span class="fa fa-desktop" aria-hidden="true"></span> Dev</h3>
-								<div class="progress">
-									<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-										<span class="skill">Bower, Gulp, Composer</span>
-									</div>
-								</div>
-								<div class="progress">
-									<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
-										<span class="skill">Responsive Web Design</span>
-									</div>
-								</div>
-								<div class="progress">
-									<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
-										<span class="skill">Single-Page Applications</span>
-									</div>
-								</div>
-								<div class="progress">
-									<div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
-										<span class="skill">SEO</span>
-									</div>
-								</div>
-								<div class="progress">
-									<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
-										<span class="skill">High Performance Web Sites</span>
-									</div>
+
+							<div class="row row-content">
+								<div class="box-container">
+
+									<?php
+										foreach ( $categories as $category ) :
+											$category_badge = get_term_meta( $category->term_id, 'skill-badge', true );
+
+											if ( empty( $category_badge ) ) {
+												$category_badge = 'fa-cog';
+											}
+
+											$args = array(
+												'post_type'      => 'skill',
+												'posts_per_page' => 99,
+												'tax_query'      => array(
+													array(
+														'taxonomy' => 'skill-category',
+														'field'    => 'slug',
+														'terms'    => $category->slug,
+													)
+												)
+											);
+
+											$skills = get_posts( $args );
+
+											if ( sizeof( $skills ) > 0 ) :
+												?>
+
+													<div class="col-sm-12 col-md-4">
+														<h3 class="subtitle"><span class="fa <?php echo esc_attr( $category_badge ); ?>" aria-hidden="true"></span> <?php echo esc_html( $category->name ); ?></h3>
+											
+														<?php
+															global $post;
+
+															foreach ( $skills as $post ) :
+																setup_postdata( $post );
+																$skill_proficiency = get_post_meta( get_the_id(), 'skill-proficiency', true );
+															?>
+
+																<div class="progress">
+																	<div class="progress-bar" role="progressbar" aria-valuenow="<?php echo esc_attr( $skill_proficiency ) ?>" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo esc_attr( $skill_proficiency ) ?>%">
+																		<span class="skill"><?php the_title(); ?></span>
+																	</div>
+																</div>
+
+															<?php
+															endforeach;
+															wp_reset_postdata();
+														?>
+
+													</div>
+
+												<?php
+											endif;
+										endforeach;
+									?>
+
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-			</section>
-			<?php
+					</section>
+
+				<?php
+			endif;
 		}
 
 		/**
@@ -178,103 +173,93 @@ if ( ! class_exists( 'NREC_Frontend' ) ) :
 		 * @return  void
 		 */
 		public function homepage_section_works() {
-			?>
-			<section id="works" class="section works">
-				<div class="container">
-					<div class="row row-title">
-						<div class="col-md-12">
-							<h2 class="title"><span class="fa fa-suitcase" aria-hidden="true"></span> Work Experience</h2>
-						</div>
-					</div>
-					<div class="timeline">
-						<div class="row row-content">
-							<span class="fa fa-circle" aria-hidden="true"></span>
-							<div class="col-sm-6">
-								<div class="box">
-									<h3 class="subtitle">Senior Front-end and WordPress Developer</h3>
-									<div class="full-description">
-										<p class="meta">LightSpeed<br>Jun 2016 - Present<br>Cape Town, South Africa (remote)</p>
-										<p>Code WordPress themes and plugins. Update/maintain products. Provide support. Skills: LAMP, WordPress, JavaScript/jQuery, HTML5, CSS3, Bootstrap, Sass, Gulp.</p>
-									</div>
+			$args = array(
+				'post_type'      => 'work-experience',
+				'posts_per_page' => 99,
+			);
+
+			$works = get_posts( $args );
+
+			if ( sizeof( $works ) > 0 ) :
+				?>
+					
+					<section id="works" class="section works">
+						<div class="container">
+							<div class="row row-title">
+								<div class="col-md-12">
+									<h2 class="title"><span class="fa fa-suitcase" aria-hidden="true"></span> Work Experience</h2>
 								</div>
 							</div>
-						</div>
-						<div class="row row-content">
-							<span class="fa fa-circle" aria-hidden="true"></span>
-							<div class="col-sm-6">
-								<div class="box">
-									<h3 class="subtitle">Front-end and WordPress Developer</h3>
-									<div class="full-description">
-										<p class="meta">Themify<br>Mar 2016 - Jun 2016<br>Toronto, Canada (remote)</p>
-										<p>Code WordPress themes and plugins. Update/maintain products. Provide support. Skills: LAMP, WordPress, JavaScript/jQuery, HTML5, CSS3.</p>
-									</div>
-								</div>
+
+							<div class="timeline">
+
+								<?php
+									global $post;
+
+									foreach ( $works as $post ) :
+										setup_postdata( $post );
+
+										$work_company     = get_post_meta( get_the_id(), 'work-company', true );
+										$work_location    = get_post_meta( get_the_id(), 'work-location', true );
+										$work_time_period = get_post_meta( get_the_id(), 'work-time-period', true );
+										$work_date_from   = '';
+										$work_date_to     = '';
+
+										if ( ! empty( $work_time_period['work-date-from'] ) ) {
+											$work_date_from = $work_time_period['work-date-from'];
+											$work_date_from = strtotime( $work_date_from );
+											$work_date_from = date( 'F Y', $work_date_from );
+										}
+
+										if ( ! empty( $work_time_period['work-current'] ) ) {
+											$work_date_to = esc_html__( 'Present', 'nandotess-resume-extra-content' );
+										}
+										elseif ( ! empty( $work_time_period['work-date-to'] ) ) {
+											$work_date_to = $work_time_period['work-date-to'];
+											$work_date_to = strtotime( $work_date_to );
+											$work_date_to = date( 'F Y', $work_date_to );
+										}
+									?>
+
+										<div class="row row-content">
+											<span class="fa fa-circle" aria-hidden="true"></span>
+											
+											<div class="col-sm-6">
+												<div class="box">
+													<h3 class="subtitle"><?php the_title(); ?></h3>
+													
+													<div class="full-description">
+														<?php if ( ! empty( $work_company ) ) : ?>
+															<p class="meta"><?php echo esc_html( $work_company ); ?></p>
+														<?php endif; ?>
+														
+														<?php if ( ! empty( $work_location ) ) : ?>
+															<p class="meta"><?php echo esc_html( $work_location ); ?></p>
+														<?php endif; ?>
+														
+														<?php if ( ! empty( $work_date_from ) && ! empty( $work_date_to ) ) : ?>
+															<p class="meta"><?php echo esc_html( $work_date_from . ' - ' . $work_date_to ); ?></p>
+														<?php endif; ?>
+
+														<div class="content">
+															<?php the_content(); ?>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									<?php
+									endforeach;
+									wp_reset_postdata();
+								?>
+
 							</div>
 						</div>
-						<div class="row row-content">
-							<span class="fa fa-circle" aria-hidden="true"></span>
-							<div class="col-sm-6">
-								<div class="box">
-									<h3 class="subtitle">Co-founder and Technical Lead</h3>
-									<div class="full-description">
-										<p class="meta">SantoPixel Design &amp; Code<br>Oct 2012 - Mar 2016<br>Brazil (remote)</p>
-										<p>Code WordPress themes and plugins. Update/maintain products. Provide support. Skills: LAMP, WordPress, JavaScript/jQuery, HTML5, CSS3.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="row row-content">
-							<span class="fa fa-circle" aria-hidden="true"></span>
-							<div class="col-sm-6">
-								<div class="box">
-									<h3 class="subtitle">IT Manager</h3>
-									<div class="full-description">
-										<p class="meta">Convertiva Mobile Marketing<br>May 2012 - Jun 2013<br>Brazil</p>
-										<p>Code CodeIgnter sites. Update/maintain products. Provide support. Skills: HTML5, CSS3, JavaScript/jQuery, LAMP, CodeIgniter, Memcached, Apache Solr.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="row row-content">
-							<span class="fa fa-circle" aria-hidden="true"></span>
-							<div class="col-sm-6">
-								<div class="box">
-									<h3 class="subtitle">Technical Lead</h3>
-									<div class="full-description">
-										<p class="meta">RBS Group<br>May 2010 - May 2012<br>Brazil</p>
-										<p>Technical lead, web analyst and front-end developer (JSTL, XSL, JavaScript/jQuery).</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="row row-content">
-							<span class="fa fa-circle" aria-hidden="true"></span>
-							<div class="col-sm-6">
-								<div class="box">
-									<h3 class="subtitle">Senior Web Developer</h3>
-									<div class="full-description">
-										<p class="meta">RBS Group<br>Mar 2007 - May 2010<br>Brazil</p>
-										<p>Front-end developer (JSTL, XSL, JavaScript).</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="row row-content">
-							<span class="fa fa-circle" aria-hidden="true"></span>
-							<div class="col-sm-6">
-								<div class="box">
-									<h3 class="subtitle">Web Developer</h3>
-									<div class="full-description">
-										<p class="meta">SulSoftware Systems<br>Aug 2006 - Feb 2007<br>Brazil</p>
-										<p>UI designer, web standards developer (XHTML, CSS) and ASP programmer.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<?php
+					</section>
+
+				<?php
+			endif;
 		}
 
 		/**
@@ -285,206 +270,72 @@ if ( ! class_exists( 'NREC_Frontend' ) ) :
 		 * @return  void
 		 */
 		public function homepage_section_portfolio() {
-			?>
-			<section id="portfolio" class="section portfolio">
-				<div class="container">
-					<div class="row row-title">
-						<div class="col-md-12">
-							<h2 class="title"><span class="fa fa-th-list" aria-hidden="true"></span> Portfolio</h2>
-						</div>
-					</div>
-					<div class="row row-content">
-						<div class="col-xs-12 col-sm-6 col-md-4">
-							<div class="box">
-								<a href="https://github.com/nandotess/nandotess-resume" target="_blank" rel="nofollow">
-									<figure>
-										<img src="http://demo.deviserweb.com/material-portfolio-cv-resume/assets/images/p-4.jpg" class="img-responsive">
-										<figcaption>
-											<div class="figcaption-content">
-												<h3 class="subtitle">nandotess's resume</h3>
-												<div class="full-description">
-													<p>WordPress Theme, Front-end</p>
+			$args = array(
+				'post_type'      => 'portfolio',
+				'posts_per_page' => 99,
+			);
+
+			$portfolio = get_posts( $args );
+
+			if ( sizeof( $portfolio ) > 0 ) :
+				?>
+					
+					<section id="portfolio" class="section portfolio">
+						<div class="container">
+							<div class="row row-title">
+								<div class="col-md-12">
+									<h2 class="title"><span class="fa fa-th-list" aria-hidden="true"></span> Portfolio</h2>
+								</div>
+							</div>
+
+							<div class="row row-content">
+								<div class="box-container">
+
+									<?php
+										global $post;
+
+										foreach ( $portfolio as $post ) :
+											setup_postdata( $post );
+											$portfolio_external_link = get_post_meta( get_the_id(), 'portfolio-external-link', true );
+										?>
+											
+											<div class="col-xs-12 col-sm-6 col-md-4">
+												<div class="box">
+													<a href="<?php echo esc_url( $portfolio_external_link ); ?>" target="_blank" rel="nofollow">
+														<figure>
+
+															<?php if ( has_post_thumbnail() ) : ?>
+																<?php the_post_thumbnail( 'large', array( 'class' => 'img-responsive' ) ); ?>
+															<?php else : ?>
+																<img src="https://placeholdit.imgix.net/~text?txtsize=100&amp;w=1024&amp;h=1024" class="img-responsive">
+															<?php endif; ?>
+															
+															<figcaption>
+																<div class="figcaption-content">
+																	<h3 class="subtitle"><?php the_title(); ?></h3>
+																	
+																	<div class="full-description">
+																		<?php the_content(); ?>
+																	</div>
+																</div>
+															</figcaption>
+														</figure>
+													</a>
 												</div>
 											</div>
-										</figcaption>
-									</figure>
-								</a>
+
+										<?php
+										endforeach;
+										wp_reset_postdata();
+									?>
+
+								</div>
 							</div>
 						</div>
-						<div class="col-xs-12 col-sm-6 col-md-4">
-							<div class="box">
-								<a href="https://github.com/nandotess/nandotess-resume-extra-content" target="_blank" rel="nofollow">
-									<figure>
-										<img src="http://demo.deviserweb.com/material-portfolio-cv-resume/assets/images/p-4.jpg" class="img-responsive">
-										<figcaption>
-											<div class="figcaption-content">
-												<h3 class="subtitle">nandotess's resume extra content</h3>
-												<div class="full-description">
-													<p>WordPress Plugin, Front-end</p>
-												</div>
-											</div>
-										</figcaption>
-									</figure>
-								</a>
-							</div>
-						</div>
-						<div class="col-xs-12 col-sm-6 col-md-4">
-							<div class="box">
-								<a href="https://github.com/nandotess/jquery.typer.js" target="_blank" rel="nofollow">
-									<figure>
-										<img src="http://demo.deviserweb.com/material-portfolio-cv-resume/assets/images/p-4.jpg" class="img-responsive">
-										<figcaption>
-											<div class="figcaption-content">
-												<h3 class="subtitle">jQuery Typer</h3>
-												<div class="full-description">
-													<p>Front-end</p>
-												</div>
-											</div>
-										</figcaption>
-									</figure>
-								</a>
-							</div>
-						</div>
-						<div class="col-xs-12 col-sm-6 col-md-4">
-							<div class="box">
-								<a href="https://github.com/nandotess/really-simple-resume" target="_blank" rel="nofollow">
-									<figure>
-										<img src="http://demo.deviserweb.com/material-portfolio-cv-resume/assets/images/p-4.jpg" class="img-responsive">
-										<figcaption>
-											<div class="figcaption-content">
-												<h3 class="subtitle">Really Simple Resumé</h3>
-												<div class="full-description">
-													<p>Front-end</p>
-												</div>
-											</div>
-										</figcaption>
-									</figure>
-								</a>
-							</div>
-						</div>
-						<div class="col-xs-12 col-sm-6 col-md-4">
-							<div class="box">
-								<a href="http://unisinos.fm/" target="_blank" rel="nofollow">
-									<figure>
-										<img src="http://demo.deviserweb.com/material-portfolio-cv-resume/assets/images/p-4.jpg" class="img-responsive">
-										<figcaption>
-											<div class="figcaption-content">
-												<h3 class="subtitle">Unisinos.fm</h3>
-												<div class="full-description">
-													<p>WordPress Theme, WordPress Plugin, Audio Streaming, JW Player</p>
-												</div>
-											</div>
-										</figcaption>
-									</figure>
-								</a>
-							</div>
-						</div>
-						<div class="col-xs-12 col-sm-6 col-md-4">
-							<div class="box">
-								<a href="http://www.aniksuzuki.com.br/" target="_blank" rel="nofollow">
-									<figure>
-										<img src="http://demo.deviserweb.com/material-portfolio-cv-resume/assets/images/p-4.jpg" class="img-responsive">
-										<figcaption>
-											<div class="figcaption-content">
-												<h3 class="subtitle">ANK</h3>
-												<div class="full-description">
-													<p>WordPress Theme</p>
-												</div>
-											</div>
-										</figcaption>
-									</figure>
-								</a>
-							</div>
-						</div>
-						<div class="col-xs-12 col-sm-6 col-md-4">
-							<div class="box">
-								<a href="http://dc.clicrbs.com.br/sc/" target="_blank" rel="nofollow">
-									<figure>
-										<img src="http://demo.deviserweb.com/material-portfolio-cv-resume/assets/images/p-4.jpg" class="img-responsive">
-										<figcaption>
-											<div class="figcaption-content">
-												<h3 class="subtitle">Diário Catarinense</h3>
-												<div class="full-description">
-													<p>Front-end, JSTL, XSL</p>
-												</div>
-											</div>
-										</figcaption>
-									</figure>
-								</a>
-							</div>
-						</div>
-						<div class="col-xs-12 col-sm-6 col-md-4">
-							<div class="box">
-								<a href="http://comercial.gruporbs.com.br/" target="_blank" rel="nofollow">
-									<figure>
-										<img src="http://demo.deviserweb.com/material-portfolio-cv-resume/assets/images/p-4.jpg" class="img-responsive">
-										<figcaption>
-											<div class="figcaption-content">
-												<h3 class="subtitle">RBS Group Commercial</h3>
-												<div class="full-description">
-													<p>WordPress Theme</p>
-												</div>
-											</div>
-										</figcaption>
-									</figure>
-								</a>
-							</div>
-						</div>
-						<div class="col-xs-12 col-sm-6 col-md-4">
-							<div class="box">
-								<a href="https://cobrancafacil.gruporbs.com.br/" target="_blank" rel="nofollow">
-									<figure>
-										<img src="http://demo.deviserweb.com/material-portfolio-cv-resume/assets/images/p-4.jpg" class="img-responsive">
-										<figcaption>
-											<div class="figcaption-content">
-												<h3 class="subtitle">RBS Group Collection</h3>
-												<div class="full-description">
-													<p>WordPress Theme, WS, SOAP</p>
-												</div>
-											</div>
-										</figcaption>
-									</figure>
-								</a>
-							</div>
-						</div>
-						<div class="col-xs-12 col-sm-6 col-md-4">
-							<div class="box">
-								<a href="http://www.conexaoverao.com.br/" target="_blank" rel="nofollow">
-									<figure>
-										<img src="http://demo.deviserweb.com/material-portfolio-cv-resume/assets/images/p-4.jpg" class="img-responsive">
-										<figcaption>
-											<div class="figcaption-content">
-												<h3 class="subtitle">Conexão Verão</h3>
-												<div class="full-description">
-													<p>WordPress Theme, WordPress Plugin</p>
-												</div>
-											</div>
-										</figcaption>
-									</figure>
-								</a>
-							</div>
-						</div>
-						<div class="col-xs-12 col-sm-6 col-md-4">
-							<div class="box">
-								<a href="http://atl.clicrbs.com.br/pretinhobasico/" target="_blank" rel="nofollow">
-									<figure>
-										<img src="http://demo.deviserweb.com/material-portfolio-cv-resume/assets/images/p-4.jpg" class="img-responsive">
-										<figcaption>
-											<div class="figcaption-content">
-												<h3 class="subtitle">Blogs Atlântida</h3>
-												<div class="full-description">
-													<p>WordPress Theme, WordPress Plugin</p>
-												</div>
-											</div>
-										</figcaption>
-									</figure>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<?php
+					</section>
+
+				<?php
+			endif;
 		}
 
 	}

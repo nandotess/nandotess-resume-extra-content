@@ -7,6 +7,22 @@
 				margin-top: 40px;
 			}
 
+			.col-button {
+				text-align: center;
+				
+				&:first-child:not(:last-child) {
+					@media (min-width: $screen-sm-min) {
+						text-align: right;
+					}
+				}
+				
+				&:last-child:not(:first-child) {
+					@media (min-width: $screen-sm-min) {
+						text-align: left;
+					}
+				}
+			}
+
 			.btn {
 				border: none;
 				font: {
@@ -41,13 +57,7 @@
 			}
 
 			.col-button-cv {
-				text-align: center;
-
-				@media (min-width: $screen-sm-min) {
-					text-align: right;
-				}
-
-				&.btn {
+				.btn {
 					background-color: $section_about_button_cv_background_color;
 					color: $section_about_button_cv_link_color;
 
@@ -60,13 +70,7 @@
 			}
 
 			.col-button-contact {
-				text-align: center;
-
-				@media (min-width: $screen-sm-min) {
-					text-align: left;
-				}
-
-				&.btn {
+				.btn {
 					background-color: $section_about_button_contact_background_color;
 					color: $section_about_button_contact_link_color;
 
@@ -90,7 +94,11 @@
 	}
 
 	&.skills {
-		.box {
+		.title {
+			color: $section_skills_title_color;
+		}
+
+		.box-container {
 			padding: 0;
 
 			@media (min-width: $screen-sm-min) {
@@ -100,10 +108,6 @@
 			@media (min-width: $screen-md-min) {
 				padding: 0 45px;
 			}
-		}
-
-		.title {
-			color: $section_skills_title_color;
 		}
 
 		.subtitle {
@@ -147,6 +151,10 @@
 	}
 
 	&.works {
+		.title {
+			color: $section_works_title_color;
+		}
+
 		.timeline {
 			position: relative;
 			@extend %clearfix;
@@ -256,10 +264,6 @@
 			margin-bottom: 0;
 		}
 
-		.title {
-			color: $section_works_title_color;
-		}
-
 		.subtitle {
 			color: $section_works_subtitle_color;
 			margin: 0 0 15px 0;
@@ -267,12 +271,29 @@
 
 		.meta {
 			color: $section_works_meta_color;
+			margin: 0;
+		}
+
+		.content {
+			padding-top: 10px;
 		}
 	}
 
 	&.portfolio {
 		.title {
 			color: $section_portfolio_title_color;
+		}
+
+		.box-container {
+			padding: 0;
+
+			@media (min-width: $screen-sm-min) {
+				padding: 0 25px;
+			}
+
+			@media (min-width: $screen-md-min) {
+				padding: 0 45px;
+			}
 		}
 
 		.box {
@@ -285,68 +306,58 @@
 			.subtitle {
 				margin-top: 0;
 			}
+		}
 
-			figure {
-				overflow: hidden;
-				position: relative;
+		figure {
+			overflow: hidden;
+			position: relative;
+		}
+
+		img {
+			width: 100%;
+			@include transition(transform 300ms ease-in-out);
+		}
+
+		figcaption {
+			background-color: rgba($section_portfolio_background_text_color, 0.68);
+			color: $section_portfolio_text_color;
+			height: 100%;
+			left: 0;
+			opacity: 0;
+			padding: 20px;
+			position: absolute;
+			top: 0;
+			text-align: center;
+			width: 100%;
+			@include display-flex-row;
+			@include transition(opacity 300ms ease-in-out);
+
+			@media (min-width: $screen-sm-min) {
+				padding: 30px;
 			}
 
-			img {
+			.figcaption-content {
 				width: 100%;
+				@include display-flex-column;
+				@include transform(translate(0px, 15px));
 				@include transition(transform 300ms ease-in-out);
 			}
-
-			figcaption {
-				background-color: rgba($section_portfolio_background_text_color, 0.68);
-				color: $section_portfolio_text_color;
-				height: 100%;
-				left: 0;
-				opacity: 0;
-				padding: 20px;
-				position: absolute;
-				top: 0;
-				text-align: center;
-				width: 100%;
-				@include display-flex-row;
-				@include transition(opacity 300ms ease-in-out);
-
-				@media (min-width: $screen-sm-min) {
-					padding: 30px;
-				}
-
-				.figcaption-content {
-					width: 100%;
-					@include display-flex-column;
-					@include transform(translate(0px, 15px));
-					@include transition(transform 300ms ease-in-out);
-				}
-			}
-
-			figure {
-				&:hover,
-				&:focus {
-					img {
-						@include transform(scale(1.1));
-					}
-
-					figcaption {
-						opacity: 1;
-
-						.figcaption-content {
-							@include transform(translate(0px, 0px));
-						}
-					}
-				}
-			}
 		}
 
-		.subtitle {
+		figure {
+			&:hover,
+			&:focus {
+				img {
+					@include transform(scale(1.1));
+				}
 
-		}
+				figcaption {
+					opacity: 1;
 
-		.full-description {
-			p {
-				
+					.figcaption-content {
+						@include transform(translate(0px, 0px));
+					}
+				}
 			}
 		}
 	}

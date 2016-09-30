@@ -14,14 +14,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! class_exists( 'NREC_Admin' ) ) :
 
 	/**
-	 * The nandotess's resume extra content Admin Class
+	 * Admin Class
 	 */
 	class NREC_Admin {
 
 		/**
 		 * Setup class
 		 */
-		public function __construct() {}
+		public function __construct() {
+			add_action( 'init', array( $this, 'require_post_type_classes' ), 1 );
+		}
+
+		/**
+		 * Requires the post type classes
+		 */
+		public function require_post_type_classes() {
+			$plugin_path = nandotess_resume_extra_content()->plugin_path;
+
+			include_once( $plugin_path . 'includes/class-nrec-page-homepage.php' );
+			include_once( $plugin_path . 'includes/class-nrec-post-type-skill.php' );
+			include_once( $plugin_path . 'includes/class-nrec-post-type-work-experience.php' );
+			include_once( $plugin_path . 'includes/class-nrec-post-type-portfolio.php' );
+		}
 
 	}
 

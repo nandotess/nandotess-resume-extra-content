@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name:	nandotess's resume extra content
+ * Plugin Name:	nandotess resume extra content
  * Plugin URI: #
- * Description:	A WordPress plugin to add extra content to nandotess's resume WordPress theme
+ * Description:	A WordPress plugin to add extra content to nandotess resume WordPress theme
  * Version:	1.0.0
  * Author: Fernando Tessmann
  * Author URI: http://www.fernandotessmann.com
@@ -57,6 +57,24 @@ final class NandotessResume_Extra_Content {
 	 * @since   1.0.0
 	 */
 	public $token;
+
+	/**
+	 * The plugin url
+	 *
+	 * @var     string
+	 * @access  public
+	 * @since   1.0.0
+	 */
+	public $plugin_url;
+
+	/**
+	 * The plugin path
+	 *
+	 * @var     string
+	 * @access  public
+	 * @since   1.0.0
+	 */
+	public $plugin_path;
 
 	/**
 	 * The version number
@@ -149,11 +167,17 @@ final class NandotessResume_Extra_Content {
 	public function setup() {
 		$theme = wp_get_theme();
 
-		include_once( 'includes/class-nrec-admin.php' );
+		if ( ! function_exists( 'cmb_init' ) ) {
+			if ( is_file( $this->plugin_path . 'vendor/humanmade/Custom-Meta-Boxes/custom-meta-boxes.php' ) ) {
+				include_once( $this->plugin_path . 'vendor/humanmade/Custom-Meta-Boxes/custom-meta-boxes.php' );
+			}
+		}
 
-		if ( 'nandotess\'s resume' === $theme->name ) {
-			include_once( 'includes/class-nrec-customizer.php' );
-			include_once( 'includes/class-nrec-frontend.php' );
+		include_once( $this->plugin_path . 'includes/class-nrec-admin.php' );
+
+		if ( 'nandotess resume' === $theme->name ) {
+			include_once( $this->plugin_path . 'includes/class-nrec-customizer.php' );
+			include_once( $this->plugin_path . 'includes/class-nrec-frontend.php' );
 		}
 	}
 

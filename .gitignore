@@ -1,4 +1,7 @@
 .sass-cache
+bower_components
 node_modules
-.jscsrc
-.jshintignore
+vendor/composer
+vendor/bin
+vendor/autoload.php
+composer.phar
