@@ -110,7 +110,7 @@ if ( ! class_exists( 'NREC_Frontend' ) ) :
 												$category_badge = 'fa-cog';
 											}
 
-											$args_tax_query  => array(
+											$args_tax_query = array(
 												'taxonomy' => 'skill-category',
 												'field'    => 'slug',
 												'terms'    => $category->slug,
