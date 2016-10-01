@@ -43,7 +43,7 @@ msgstr ""
 msgid "Background color"
 msgstr ""
 
-#: includes/class-nrec-customizer.php:228, includes/class-nrec-customizer.php:296
+#: includes/class-nrec-customizer.php:228, includes/class-nrec-customizer.php:311
 msgid "Text color"
 msgstr ""
 
@@ -56,6 +56,10 @@ msgid "Section Portfolio"
 msgstr ""
 
 #: includes/class-nrec-customizer.php:281
+msgid "Border color"
+msgstr ""
+
+#: includes/class-nrec-customizer.php:296
 msgid "Background Text color"
 msgstr ""
 
@@ -63,11 +67,11 @@ msgstr ""
 msgid "Present"
 msgstr ""
 
-#: includes/class-nrec-page-homepage.php:36
+#: includes/class-nrec-page-homepage.php:38
 msgid "Resume"
 msgstr ""
 
-#: includes/class-nrec-page-homepage.php:47
+#: includes/class-nrec-page-homepage.php:49
 msgid "Homepage extra content."
 msgstr ""
 
@@ -111,11 +115,11 @@ msgstr ""
 msgid "All Portfolio"
 msgstr ""
 
-#: includes/class-nrec-post-type-portfolio.php:75
+#: includes/class-nrec-post-type-portfolio.php:77
 msgid "External Link"
 msgstr ""
 
-#: includes/class-nrec-post-type-portfolio.php:85
+#: includes/class-nrec-post-type-portfolio.php:87
 msgid "Portfolio details."
 msgstr ""
 
@@ -199,23 +203,23 @@ msgstr ""
 msgid "Search Skill Categories"
 msgstr ""
 
-#: includes/class-nrec-post-type-skill.php:125
+#: includes/class-nrec-post-type-skill.php:127
 msgid "Badge"
 msgstr ""
 
-#: includes/class-nrec-post-type-skill.php:130
+#: includes/class-nrec-post-type-skill.php:132
 msgid "Icon slug/badget from FontAwesome Icons, example: fa-cog."
 msgstr ""
 
-#: includes/class-nrec-post-type-skill.php:161
+#: includes/class-nrec-post-type-skill.php:167
 msgid "Proficiency"
 msgstr ""
 
-#: includes/class-nrec-post-type-skill.php:163
+#: includes/class-nrec-post-type-skill.php:169
 msgid "Number from 0 to 100."
 msgstr ""
 
-#: includes/class-nrec-post-type-skill.php:172
+#: includes/class-nrec-post-type-skill.php:178
 msgid "Skill details."
 msgstr ""
 
@@ -263,30 +267,30 @@ msgstr ""
 msgid "Experiences"
 msgstr ""
 
-#: includes/class-nrec-post-type-work-experience.php:75
+#: includes/class-nrec-post-type-work-experience.php:77
 msgid "Company name"
 msgstr ""
 
-#: includes/class-nrec-post-type-work-experience.php:81
+#: includes/class-nrec-post-type-work-experience.php:83
 msgid "Location"
 msgstr ""
 
-#: includes/class-nrec-post-type-work-experience.php:89
+#: includes/class-nrec-post-type-work-experience.php:91
 msgid "Date from"
 msgstr ""
 
-#: includes/class-nrec-post-type-work-experience.php:95
+#: includes/class-nrec-post-type-work-experience.php:97
 msgid "Date to"
 msgstr ""
 
-#: includes/class-nrec-post-type-work-experience.php:101
+#: includes/class-nrec-post-type-work-experience.php:103
 msgid "I currently work here"
 msgstr ""
 
-#: includes/class-nrec-post-type-work-experience.php:107
+#: includes/class-nrec-post-type-work-experience.php:109
 msgid "Time period"
 msgstr ""
 
-#: includes/class-nrec-post-type-work-experience.php:118
+#: includes/class-nrec-post-type-work-experience.php:120
 msgid "Work experience details."
 msgstr ""

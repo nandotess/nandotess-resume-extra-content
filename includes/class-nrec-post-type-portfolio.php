@@ -58,7 +58,7 @@ if ( ! class_exists( 'NREC_PostType_Portfolio' ) ) :
 				'capability_type'    => 'post',
 				'has_archive'        => false,
 				'hierarchical'       => false,
-				'supports'           => array( 'title', 'editor' ),
+				'supports'           => array( 'title', 'editor', 'thumbnail' ),
 			);
 
 			register_post_type( 'portfolio', $args );

@@ -117,6 +117,10 @@
 		}
 		
 		.box {
+			figure {
+				border-color: $section_portfolio_border_color;
+			}
+
 			figcaption {
 				background-color: rgba($section_portfolio_background_text_color, 0.68);
 				color: $section_portfolio_text_color;

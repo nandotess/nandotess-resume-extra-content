@@ -53,7 +53,7 @@
 .section.portfolio .box { margin-bottom: 20px; }
 @media (min-width: 768px) { .section.portfolio .box { margin-bottom: 30px; } }
 .section.portfolio .box .subtitle { margin-top: 0; }
-.section.portfolio figure { overflow: hidden; position: relative; }
+.section.portfolio figure { border: 3px solid white; overflow: hidden; position: relative; }
 .section.portfolio img { width: 100%; -webkit-transition: transform 300ms ease-in-out; -moz-transition: transform 300ms ease-in-out; -ms-transition: transform 300ms ease-in-out; -o-transition: transform 300ms ease-in-out; transition: transform 300ms ease-in-out; }
 .section.portfolio figcaption { background-color: rgba(0, 0, 0, 0.68); color: white; height: 100%; left: 0; opacity: 0; padding: 20px; position: absolute; top: 0; text-align: center; width: 100%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; flex-flow: row; -webkit-transition: opacity 300ms ease-in-out; -moz-transition: opacity 300ms ease-in-out; -ms-transition: opacity 300ms ease-in-out; -o-transition: opacity 300ms ease-in-out; transition: opacity 300ms ease-in-out; }
 @media (min-width: 768px) { .section.portfolio figcaption { padding: 30px; } }

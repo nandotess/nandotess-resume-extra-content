@@ -270,6 +270,21 @@ if ( ! class_exists( 'NREC_Customizer' ) ) :
 			) ) );
 
 			/**
+			 * Section Portfolio: Border Color
+			 */
+			$wp_customize->add_setting( 'nrec_section_portfolio_border_color', array(
+				'default'           => '#ffffff',
+				'sanitize_callback' => 'sanitize_hex_color',
+			) );
+
+			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nrec_section_portfolio_border_color', array(
+				'label'             => esc_html__( 'Border color', 'nandotess-resume-extra-content' ),
+				'section'           => 'nrec_section_portfolio',
+				'settings'          => 'nrec_section_portfolio_border_color',
+				'priority'          => 3,
+			) ) );
+
+			/**
 			 * Section Portfolio: Background Text Color
 			 */
 			$wp_customize->add_setting( 'nrec_section_portfolio_background_text_color', array(
@@ -281,7 +296,7 @@ if ( ! class_exists( 'NREC_Customizer' ) ) :
 				'label'             => esc_html__( 'Background Text color', 'nandotess-resume-extra-content' ),
 				'section'           => 'nrec_section_portfolio',
 				'settings'          => 'nrec_section_portfolio_background_text_color',
-				'priority'          => 2,
+				'priority'          => 3,
 			) ) );
 
 			/**
@@ -296,7 +311,7 @@ if ( ! class_exists( 'NREC_Customizer' ) ) :
 				'label'             => esc_html__( 'Text color', 'nandotess-resume-extra-content' ),
 				'section'           => 'nrec_section_portfolio',
 				'settings'          => 'nrec_section_portfolio_text_color',
-				'priority'          => 3,
+				'priority'          => 4,
 			) ) );
 		}
 
@@ -325,6 +340,7 @@ if ( ! class_exists( 'NREC_Customizer' ) ) :
 				'section_works_meta_color'                      => get_theme_mod( 'nrec_section_works_meta_color', '#2196f3' ),
 
 				'section_portfolio_title_color'                 => get_theme_mod( 'nrec_section_portfolio_title_color', '#5f5f5f' ),
+				'section_portfolio_border_color'                => get_theme_mod( 'nrec_section_portfolio_border_color', '#ffffff' ),
 				'section_portfolio_background_text_color'       => get_theme_mod( 'nrec_section_portfolio_background_text_color', '#000000' ),
 				'section_portfolio_text_color'                  => get_theme_mod( 'nrec_section_portfolio_text_color', '#ffffff' ),
 			) );
