@@ -199,23 +199,23 @@ msgstr ""
 msgid "Search Skill Categories"
 msgstr ""
 
-#: includes/class-nrec-post-type-skill.php:123
+#: includes/class-nrec-post-type-skill.php:125
 msgid "Badge"
 msgstr ""
 
-#: includes/class-nrec-post-type-skill.php:128
+#: includes/class-nrec-post-type-skill.php:130
 msgid "Icon slug/badget from FontAwesome Icons, example: fa-cog."
 msgstr ""
 
-#: includes/class-nrec-post-type-skill.php:156
+#: includes/class-nrec-post-type-skill.php:161
 msgid "Proficiency"
 msgstr ""
 
-#: includes/class-nrec-post-type-skill.php:158
+#: includes/class-nrec-post-type-skill.php:163
 msgid "Number from 0 to 100."
 msgstr ""
 
-#: includes/class-nrec-post-type-skill.php:167
+#: includes/class-nrec-post-type-skill.php:172
 msgid "Skill details."
 msgstr ""
 
