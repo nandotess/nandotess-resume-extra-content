@@ -30,7 +30,7 @@ if ( ! class_exists( 'NREC_PostType_Skill' ) ) :
 			add_action( 'skill-category_add_form_fields',  array( $this, 'add_taxonomies_fields' ) );
 			add_action( 'skill-category_edit_form_fields', array( $this, 'add_taxonomies_fields' ) );
 
-			add_action( 'create_skill-category',           array( $this, 'save_taxonomies_fields' ) );
+			//add_action( 'create_skill-category',         array( $this, 'save_taxonomies_fields' ) );
 			add_action( 'edited_skill-category',           array( $this, 'save_taxonomies_fields' ) );
 		}
 
@@ -136,6 +136,9 @@ if ( ! class_exists( 'NREC_PostType_Skill' ) ) :
 		 * Save custom fields in taxonomies
 		 */
 		public function save_taxonomies_fields( $term_id = 0 ) {
+			//check_admin_referer( 'edit-tags.php', '_wpnonce' );
+			check_admin_referer( 'update-tag_' . $term_id );
+
 			$meta = sanitize_text_field( wp_unslash( $_POST['skill-badge'] ) );
 			$meta = ! empty( $meta ) ? $meta : '';
 
