@@ -31,7 +31,7 @@ if ( ! class_exists( 'NREC_Customizer' ) ) :
 		/**
 		 * Customizer Controls and Settings
 		 *
-		 * @param WP_Customize_Manager $wp_customize Theme Customizer object
+		 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
 		 * @since 1.0.0
 		 */
 		public function customize_register( $wp_customize ) {
@@ -303,7 +303,7 @@ if ( ! class_exists( 'NREC_Customizer' ) ) :
 		/**
 		 * ????
 		 *
-		 * @param array $theme_mods Theme mods array
+		 * @param array $theme_mods Theme mods array.
 		 * @since 1.0.0
 		 */
 		public function sass_variables( $theme_mods ) {
@@ -333,7 +333,7 @@ if ( ! class_exists( 'NREC_Customizer' ) ) :
 		/**
 		 * ??
 		 *
-		 * @param string $scss css content
+		 * @param string $scss css content.
 		 * @since 1.0.0
 		 */
 		public function sass_content( $scss ) {

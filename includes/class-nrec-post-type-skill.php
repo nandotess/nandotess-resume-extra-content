@@ -109,6 +109,8 @@ if ( ! class_exists( 'NREC_PostType_Skill' ) ) :
 
 		/**
 		 * Add custom fields in taxonomies
+		 *
+		 * @param Object $term term object.
 		 */
 		public function add_taxonomies_fields( $term = false ) {
 			$value = false;
@@ -136,6 +138,8 @@ if ( ! class_exists( 'NREC_PostType_Skill' ) ) :
 
 		/**
 		 * Save custom fields in taxonomies
+		 *
+		 * @param int $term_id term id.
 		 */
 		public function save_taxonomies_fields( $term_id = 0 ) {
 			check_admin_referer( 'nrec_skill_category', '_nrec_nonce' );
@@ -152,8 +156,10 @@ if ( ! class_exists( 'NREC_PostType_Skill' ) ) :
 
 		/**
 		 * Add custom meta boxes
+		 *
+		 * @param array $meta_boxes meta boxes.
 		 */
-		public function metaboxes( array $meta_boxes ) {
+		public function metaboxes( $meta_boxes ) {
 			$fields = array();
 
 			$fields[] = array(

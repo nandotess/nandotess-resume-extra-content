@@ -66,8 +66,10 @@ if ( ! class_exists( 'NREC_PostType_Portfolio' ) ) :
 
 		/**
 		 * Add custom meta boxes
+		 *
+		 * @param array $meta_boxes meta boxes.
 		 */
-		public function metaboxes( array $meta_boxes ) {
+		public function metaboxes( $meta_boxes ) {
 			$fields = array();
 
 			$fields[] = array(
