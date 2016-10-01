@@ -3,11 +3,6 @@
 	<description>A custom set of code standard rules to check for WordPress themes.</description>
 
 	<rule ref="WordPress">
-		<exclude name="Generic.WhiteSpace.ScopeIndent.IncorrectExact" />
-		<exclude name="Generic.WhiteSpace.ScopeIndent.Incorrect" />
-		<exclude name="PEAR.Functions.FunctionCallSignature.Indent" />
-
-		<exclude name="WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceBeforeOpenParenthesis" />
-		<exclude name="Squiz.Commenting" />
+		<exclude name="WordPress.VIP.ValidatedSanitizedInput.InputNotValidated" />
 	</rule>
 </ruleset>
