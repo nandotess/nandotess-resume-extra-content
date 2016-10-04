@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/nandotess/nandotess-resume-extra-content.svg?branch=master)](https://travis-ci.org/nandotess/nandotess-resume-extra-content)
 
 # nandotess resume extra content
-A WordPress plugin to add extra content to nandotess resume WordPress theme:
+A WordPress plugin to add extra content to [nandotess resume](https://github.com/nandotess/nandotess-resume) WordPress theme:
 * Skills
 * Experiences
 * Portfolio
@@ -12,9 +12,6 @@ A WordPress plugin to add extra content to nandotess resume WordPress theme:
 * Responsive Design
 * NPM, Bower, Gulp, Bootstrap, Sass
 * WP Customizer Colors (using Sass to generate CSS in WP Dashboard)
-
-## Main theme
-To use this WordPress plugin, please combine with the WordPress theme [nandotess resume](https://github.com/nandotess/nandotess-resume).
 
 ## Example
 [@TODO](#)
