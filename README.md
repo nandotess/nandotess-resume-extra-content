@@ -1,7 +1,6 @@
 [![Build Status](https://travis-ci.org/nandotess/nandotess-resume-extra-content.svg?branch=master)](https://travis-ci.org/nandotess/nandotess-resume-extra-content)
 [![Code Climate](https://codeclimate.com/github/nandotess/nandotess-resume-extra-content/badges/gpa.svg)](https://codeclimate.com/github/nandotess/nandotess-resume-extra-content)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nandotess/nandotess-resume-extra-content/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nandotess/nandotess-resume-extra-content/?branch=master)
-[![Coverage Status](https://coveralls.io/repos/github/nandotess/nandotess-resume-extra-content/badge.svg?branch=master)](https://coveralls.io/github/nandotess/nandotess-resume-extra-content?branch=master)
 
 # nandotess resume extra content
 A WordPress plugin to add extra content to [nandotess resume](https://github.com/nandotess/nandotess-resume) WordPress theme:
