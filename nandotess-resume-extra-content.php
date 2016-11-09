@@ -3,7 +3,7 @@
  * Plugin Name:	nandotess resume extra content
  * Plugin URI: #
  * Description:	A WordPress plugin to add extra content to nandotess resume WordPress theme
- * Version:	1.0.0
+ * Version:	1.1.0
  * Author: Fernando Tessmann
  * Author URI: http://www.fernandotessmann.com
  * License: GPL-3.0
