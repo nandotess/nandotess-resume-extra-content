@@ -35,7 +35,7 @@
 
 @media (min-width: 768px) { .section.skills .box-container { padding: 0 4.5rem; } }
 
-.section.skills .subtitle { color: #5f5f5f; margin: 0 0 3rem 0; }
+.section.skills .subtitle { color: #5f5f5f; margin: 0 0 3rem 0; text-align: center; }
 
 .section.skills .subtitle .fa { margin-right: 10px; }
 
