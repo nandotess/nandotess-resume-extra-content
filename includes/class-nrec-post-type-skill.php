@@ -11,12 +11,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'NREC_PostType_Skill' ) ) :
+if ( ! class_exists( 'NREC_Post_Type_Skill' ) ) :
 
 	/**
 	 * Post Type Skill Class
 	 */
-	class NREC_PostType_Skill {
+	class NREC_Post_Type_Skill {
 
 		/**
 		 * Setup class
@@ -185,4 +185,4 @@ if ( ! class_exists( 'NREC_PostType_Skill' ) ) :
 
 endif;
 
-return new NREC_PostType_Skill();
+return new NREC_Post_Type_Skill();

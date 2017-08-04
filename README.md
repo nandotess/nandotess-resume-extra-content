@@ -1,6 +1,4 @@
 [![Build Status](https://travis-ci.org/nandotess/nandotess-resume-extra-content.svg?branch=master)](https://travis-ci.org/nandotess/nandotess-resume-extra-content)
-[![Code Climate](https://codeclimate.com/github/nandotess/nandotess-resume-extra-content/badges/gpa.svg)](https://codeclimate.com/github/nandotess/nandotess-resume-extra-content)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nandotess/nandotess-resume-extra-content/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nandotess/nandotess-resume-extra-content/?branch=master)
 
 # nandotess resume extra content
 A WordPress plugin to add extra content to [nandotess resume](https://github.com/nandotess/nandotess-resume) WordPress theme:
@@ -55,11 +53,9 @@ This will run the package.json file and download the list of modules to a "node_
 This will run the bower.json file and download the list of modules to a "bower_components" folder in the template.
 
 ### Gulp Commands
-* `gulp compile-bower` to compile bower files
 * `gulp compile-css` to compile style files
 * `gulp compile-js` to compile script files
-* `gulp compile-pot` to compile language files
-* `gulp deploy` to compile style, script and language files
+* `gulp wordpress-lang` to compile language files
 
 ## Resources
 * https://travis-ci.org/

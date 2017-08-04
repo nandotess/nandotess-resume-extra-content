@@ -43,7 +43,9 @@ if ( ! class_exists( 'NREC_Page_Homepage' ) ) :
 				'title'    => 'Homepage',
 				'fields'   => $fields,
 				'pages'    => 'page',
-				'show_on'  => array( 'page-template' => 'templates/template-front-page.php' ),
+				'show_on'  => array(
+					'page-template' => 'templates/template-front-page.php',
+				),
 				'context'  => 'normal',
 				'priority' => 'high',
 				'desc'     => esc_html__( 'Homepage extra content.', 'nandotess-resume-extra-content' ),

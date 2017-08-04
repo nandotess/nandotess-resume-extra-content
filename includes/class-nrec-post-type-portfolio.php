@@ -11,12 +11,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'NREC_PostType_Portfolio' ) ) :
+if ( ! class_exists( 'NREC_Post_Type_Portfolio' ) ) :
 
 	/**
 	 * Post Type Portfolio Class
 	 */
-	class NREC_PostType_Portfolio {
+	class NREC_Post_Type_Portfolio {
 
 		/**
 		 * Setup class
@@ -94,4 +94,4 @@ if ( ! class_exists( 'NREC_PostType_Portfolio' ) ) :
 
 endif;
 
-return new NREC_PostType_Portfolio();
+return new NREC_Post_Type_Portfolio();

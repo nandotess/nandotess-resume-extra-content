@@ -11,12 +11,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'NREC_PostType_WorkExperience' ) ) :
+if ( ! class_exists( 'NREC_Post_Type_Work_Experience' ) ) :
 
 	/**
 	 * Post Type Work Experience Class
 	 */
-	class NREC_PostType_WorkExperience {
+	class NREC_Post_Type_Work_Experience {
 
 		/**
 		 * Setup class
@@ -127,4 +127,4 @@ if ( ! class_exists( 'NREC_PostType_WorkExperience' ) ) :
 
 endif;
 
-return new NREC_PostType_WorkExperience();
+return new NREC_Post_Type_Work_Experience();

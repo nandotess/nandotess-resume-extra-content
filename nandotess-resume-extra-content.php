@@ -3,7 +3,7 @@
  * Plugin Name:	nandotess resume extra content
  * Plugin URI: #
  * Description:	A WordPress plugin to add extra content to nandotess resume WordPress theme
- * Version:	1.1.0
+ * Version:	1.2.0
  * Author: Fernando Tessmann
  * Author URI: http://www.fernandotessmann.com
  * License: GPL-3.0
@@ -20,13 +20,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Returns the main instance of NandotessResume_Extra_Content to prevent the need to use globals
+ * Returns the main instance of Nandotess_Resume_Extra_Content to prevent the need to use globals
  *
  * @since  1.0.0
- * @return object NandotessResume_Extra_Content
+ * @return object Nandotess_Resume_Extra_Content
  */
 function nandotess_resume_extra_content() {
-	return NandotessResume_Extra_Content::instance();
+	return Nandotess_Resume_Extra_Content::instance();
 }
 
 nandotess_resume_extra_content();
@@ -34,14 +34,14 @@ nandotess_resume_extra_content();
 /**
  * Main Class
  *
- * @class NandotessResume_Extra_Content
+ * @class Nandotess_Resume_Extra_Content
  * @since 1.0.0
  * @package nandotess-resume-extra-content
  */
-final class NandotessResume_Extra_Content {
+final class Nandotess_Resume_Extra_Content {
 
 	/**
-	 * NandotessResume_Extra_Content The single instance of NandotessResume_Extra_Content
+	 * Nandotess_Resume_Extra_Content The single instance of Nandotess_Resume_Extra_Content
 	 *
 	 * @var 	object
 	 * @access  private
@@ -96,7 +96,7 @@ final class NandotessResume_Extra_Content {
 		$this->token		= 'nandotess-resume-extra-content';
 		$this->plugin_url	= plugin_dir_url( __FILE__ );
 		$this->plugin_path	= plugin_dir_path( __FILE__ );
-		$this->version		= '1.1.0';
+		$this->version		= '1.2.0';
 
 		register_activation_hook( __FILE__, array( $this, 'install' ) );
 
@@ -106,14 +106,14 @@ final class NandotessResume_Extra_Content {
 	}
 
 	/**
-	 * Main NandotessResume_Extra_Content Instance
+	 * Main Nandotess_Resume_Extra_Content Instance
 	 *
-	 * Ensures only one instance of NandotessResume_Extra_Content is loaded or can be loaded
+	 * Ensures only one instance of Nandotess_Resume_Extra_Content is loaded or can be loaded
 	 *
 	 * @since 1.0.0
 	 * @static
-	 * @see NandotessResume_Extra_Content()
-	 * @return Main NandotessResume_Extra_Content instance
+	 * @see Nandotess_Resume_Extra_Content()
+	 * @return Main Nandotess_Resume_Extra_Content instance
 	 */
 	public static function instance() {
 		if ( is_null( self::$_instance ) ) {

@@ -7,3 +7,8 @@ All notable changes to this project will be documented in this file.
 ## [1.1.0]
 - Configured Code Climate service.
 - Configured Scrutinizer service.
+
+## [1.2.0]
+- Files structure updated.
+- Deploy files updated.
+- CSS files updated.

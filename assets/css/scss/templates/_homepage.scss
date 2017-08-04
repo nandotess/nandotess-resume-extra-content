@@ -1,38 +1,30 @@
 .section {
 	&.about {
 		.row-buttons {
-			margin: 20px 0 0 0;
-
-			@media (min-width: $screen-md-min) {
-				margin-top: 40px;
-			}
+			margin: 4rem 0 0 0;
 
 			.col-button {
 				text-align: center;
-				
+
 				&:first-child:not(:last-child) {
-					@media (min-width: $screen-sm-min) {
-						text-align: right;
-					}
+					@media (min-width: $screen-sm-min) { text-align: right; }
 				}
-				
+
 				&:last-child:not(:first-child) {
-					@media (min-width: $screen-sm-min) {
-						text-align: left;
-					}
+					@media (min-width: $screen-sm-min) { text-align: left; }
 				}
 			}
 
 			.btn {
 				border: none;
+				border-radius: 0;
 				font: {
 					size: 15px;
 					weight: 500;
 				}
 				margin: 5px 0;
 				text-transform: uppercase;
-				@include border-radius(0);
-				@include transition(background-color 300ms ease-in-out);
+				transition: background-color 300ms ease-in-out;
 
 				@media (min-width: $screen-md-min) {
 					margin: 0;
@@ -44,14 +36,14 @@
 
 				.fa {
 					margin-left: 7.5px;
-					@include transition(transform 300ms ease-in-out);
+					transition: transform 300ms ease-in-out;
 				}
 
 				&:hover,
 				&:active,
 				&:focus {
-					.fa {
-						@include transform(scale(1.3));
+					@media (min-width: $screen-sm-min) {
+						.fa { transform: scale(1.3); }
 					}
 				}
 			}
@@ -63,9 +55,7 @@
 
 					&:hover,
 					&:active,
-					&:focus {
-						background-color: lighten($section_about_button_cv_background_color, 5%);
-					}
+					&:focus { background-color: lighten($section_about_button_cv_background_color, 5%); }
 				}
 			}
 
@@ -88,56 +78,43 @@
 	&.works,
 	&.portfolio {
 		.title {
-			margin-bottom: 50px;
+			margin-bottom: 5rem;
 			text-align: center;
 		}
 	}
 
 	&.skills {
-		.title {
-			color: $section_skills_title_color;
-		}
+		.title { color: $section_skills_title_color; }
 
 		.box-container {
 			padding: 0;
 
-			@media (min-width: $screen-sm-min) {
-				padding: 0 25px;
-			}
-
-			@media (min-width: $screen-md-min) {
-				padding: 0 45px;
-			}
+			@media (min-width: $screen-sm-min) { padding: 0 4.5rem; }
 		}
 
 		.subtitle {
 			color: $section_skills_subtitle_color;
-			margin: 0 0 30px 0;
+			margin: 0 0 3rem 0;
 
-			.fa {
-				margin-right: 10px;
-			}
+			.fa { margin-right: 10px; }
 		}
 
 		.progress {
 			background-color: rgba($section_skills_skill_background_color, 0.33);
+			border-radius: 0;
 			height: 30px;
-			margin-bottom: 30px;
-			@include border-radius(0);
+			margin-bottom: 3rem;
 		}
 
-		.col-sm-12:last-child .progress:last-child {
-			margin-bottom: 0;
-		}
+		.col-sm-12:last-child .progress:last-child { margin-bottom: 0; }
 
 		@media (min-width: $screen-md-min) {
-			.col-md-4 .progress:last-child {
-				margin-bottom: 0;
-			}
+			.col-md-4 .progress:last-child { margin-bottom: 0; }
 		}
 
 		.progress-bar {
 			background-color: $section_skills_skill_background_color;
+			box-shadow: none;
 			color: $section_skills_skill_text_color;
 			font: {
 				size: 13px;
@@ -146,14 +123,11 @@
 			line-height: 30px;
 			text-align: left;
 			padding: 0 10px;
-			@include box-shadow(none);
 		}
 	}
 
 	&.works {
-		.title {
-			color: $section_works_title_color;
-		}
+		.title { color: $section_works_title_color; }
 
 		.timeline {
 			position: relative;
@@ -163,6 +137,7 @@
 				&:before {
 					background-color: $section_works_title_color;
 					bottom: 50px;
+					box-shadow: inset 0 -100px 100px -30px $background_color;
 					content: '';
 					display: block;
 					left: 50%;
@@ -170,7 +145,6 @@
 					position: absolute;
 					top: 15px;
 					width: 2px;
-					@include box-shadow(inset 0 -100px 100px -30px $background_color);
 				}
 			}
 		}
@@ -179,11 +153,9 @@
 			position: relative;
 
 			@media (min-width: $screen-sm-min) {
-				margin-top: -60px;
+				margin-top: -6rem;
 
-				&:first-child {
-					margin-top: 0;
-				}
+				&:first-child { margin-top: 0; }
 			}
 
 			.fa {
@@ -204,13 +176,12 @@
 		.box {
 			background-color: $section_works_background_color;
 			color: $section_works_text_color;
-			margin-bottom: 20px;
-			padding: 20px;
+			margin-bottom: 4rem;
+			padding: 4rem;
 			position: relative;
 
 			@media (min-width: $screen-sm-min) {
 				margin-bottom: 0;
-				padding: 30px;
 
 				&:before {
 					border: 12px solid transparent;
@@ -222,10 +193,6 @@
 					width: 0;
 				}
 			}
-
-			@media (min-width: $screen-md-min) {
-				padding: 40px;
-			}
 		}
 
 		@media (min-width: $screen-sm-min) {
@@ -235,7 +202,7 @@
 						float: right;
 
 						.box {
-							margin-left: 30px;
+							margin-left: 3rem;
 
 							&:before {
 								border-right-color: $section_works_background_color;
@@ -248,7 +215,7 @@
 				&:nth-child(odd) {
 					.col-sm-6 {
 						.box {
-							margin-right: 30px;
+							margin-right: 3rem;
 
 							&:before {
 								border-left-color: $section_works_background_color;
@@ -260,9 +227,7 @@
 			}
 		}
 
-		.row-content:last-child .box:last-child {
-			margin-bottom: 0;
-		}
+		.row-content:last-child .box:last-child { margin-bottom: 0; }
 
 		.subtitle {
 			color: $section_works_subtitle_color;
@@ -274,38 +239,22 @@
 			margin: 0;
 		}
 
-		.content {
-			padding-top: 10px;
-		}
+		.content { padding-top: 1rem; }
 	}
 
 	&.portfolio {
-		.title {
-			color: $section_portfolio_title_color;
-		}
+		.title { color: $section_portfolio_title_color; }
 
 		.box-container {
 			padding: 0;
 
-			@media (min-width: $screen-sm-min) {
-				padding: 0 25px;
-			}
-
-			@media (min-width: $screen-md-min) {
-				padding: 0 45px;
-			}
+			@media (min-width: $screen-sm-min) { padding: 0 4.5rem; }
 		}
 
 		.box {
-			margin-bottom: 20px;
+			margin-bottom: 3rem;
 
-			@media (min-width: $screen-sm-min) {
-				margin-bottom: 30px;
-			}
-
-			.subtitle {
-				margin-top: 0;
-			}
+			.subtitle { margin-top: 0; }
 		}
 
 		figure {
@@ -315,48 +264,50 @@
 		}
 
 		img {
+			transition: transform 300ms ease-in-out;
 			width: 100%;
-			@include transition(transform 300ms ease-in-out);
 		}
 
 		figcaption {
 			background-color: rgba($section_portfolio_background_text_color, 0.68);
 			color: $section_portfolio_text_color;
+			display: flex;
+			flex-flow: row;
 			height: 100%;
 			left: 0;
-			opacity: 0;
-			padding: 20px;
+			opacity: 1;
+			padding: 3rem;
 			position: absolute;
 			top: 0;
 			text-align: center;
+			transition: opacity 300ms ease-in-out;
 			width: 100%;
-			@include display-flex-row;
-			@include transition(opacity 300ms ease-in-out);
 
-			@media (min-width: $screen-sm-min) {
-				padding: 30px;
-			}
+			@media (min-width: $screen-sm-min) { opacity: 0; }
 
 			.figcaption-content {
+				align-items: center;
+				display: flex;
+				flex-flow: column;
+				justify-content: center;
+				transform: translate(0px, 0px);
+				transition: transform 300ms ease-in-out;
 				width: 100%;
-				@include display-flex-column;
-				@include transform(translate(0px, 15px));
-				@include transition(transform 300ms ease-in-out);
+
+				@media (min-width: $screen-sm-min) { transform: translate(0px, 15px); }
 			}
 		}
 
-		figure {
-			&:hover,
-			&:focus {
-				img {
-					@include transform(scale(1.1));
-				}
+		@media (min-width: $screen-sm-min) {
+			figure {
+				&:hover,
+				&:focus {
+					img { transform: scale(1.1); }
 
-				figcaption {
-					opacity: 1;
+					figcaption {
+						opacity: 1;
 
-					.figcaption-content {
-						@include transform(translate(0px, 0px));
+						.figcaption-content { transform: translate(0px, 0px); }
 					}
 				}
 			}
