@@ -16,9 +16,6 @@ A WordPress plugin to add extra content to [nandotess resume](https://github.com
 ## Example
 [@TODO](#)
 
-## Real example
-[Fernando Tessmann resume](http://www.fernandotessmann.com/)
-
 ## Biggest references
 
 ### Best practices
