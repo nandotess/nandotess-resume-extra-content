@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.org/nandotess/nandotess-resume-extra-content.svg?branch=master)](https://travis-ci.org/nandotess/nandotess-resume-extra-content)
-
-# nandotess resume extra content
+# WordPress Plugin: nandotess resume extra content
 A WordPress plugin to add extra content to [nandotess resume](https://github.com/nandotess/nandotess-resume) WordPress theme:
 * Skills
 * Experiences
